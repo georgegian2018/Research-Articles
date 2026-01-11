@@ -1,11 +1,3 @@
-Would you like me to:
-•	Export this into a downloadable Word document?
-•	Generate example diagrams for the figures?
-•	Or continue with the next corrupted file?
-Let me know what you'd like next.
-
-
-
 # Design of a Rectangular Linear Microstrip Patch Antenna Array for 5G Communication
 
 ## COMPREHENSIVE TECHNICAL EXTRACTION
