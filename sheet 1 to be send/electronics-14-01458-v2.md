@@ -8957,71 +8957,16 @@ Number of users
 10-1
 Bit error rate
 Figure 25: Bit error rate versus the number of users with different antenna conﬁgurations.
-Moreover, FAS enjoys rapid channel hardening with signif-
-icantly fewer radiating elements as compared to TAS. Unlike
-TAS, which relies on the law of large number, FAS exploits
-the extreme value theorem to realize strong channel hardening
-[67]. Fig. 28 provides an example of the channel hardening
-effect in FAS and TAS. To achieve a 0.02 channel variation,
-FAS only requires 9 active radiating elements, compared to
-64 ﬁxed-position antennas in TAS. Hence, by reconﬁguring
-radiating elements, FAS improves the performance of cellular
-networks in new ways. In the subsequent section, we explore
-multiuser FAS communications more extensively.
+Moreover, FAS enjoys rapid channel hardening with signif- icantly fewer radiating elements as compared to TAS. Unlike TAS, which relies on the law of large number, FAS exploits the extreme value theorem to realize strong channel hardening [67]. Fig. 28 provides an example of the channel hardening effect in FAS and TAS. To achieve a 0.02 channel variation, FAS only requires 9 active radiating elements, compared to 64 ﬁxed-position antennas in TAS. Hence, by reconﬁguring radiating elements, FAS improves the performance of cellular networks in new ways. In the subsequent section, we explore multiuser FAS communications more extensively.
 ```
 
 ### Section V: New Methods for Multiple Access (extracted)
 
 ```text
 V. NEW METHODS FOR MULTIPLE ACCESS
-With position ﬂexibility, FAS can innovate multiple access
-and change the way in which interference is mitigated. This
-new technique is referred to as FAMA [73], [74]. Speciﬁcally,
-unlike existing techniques, FAMA does not require any CSI at
-the transmitter nor SIC at the receiver. The idea behind FAMA
-is to enable receiver to access a desirable spatial moment for
-communications where the interference suffers from deep fade.
-This is in contrast to usual spatial multiplexing schemes where
-signals are carefully mixed to create artiﬁcial interference null,
-as in the case of multiuser or massive MIMO.
-FAMA can be categorized into two types: slow FAMA [74],
-[76], [92], [178], [179], [180], [181] and fast FAMA [73],
-[182], [183]. In slow FAMA, the receiver’s antenna position
-changes whenever the channel changes while in fast FAMA,
-the receiver changes its position on a symbol-by-symbol basis.
-In both schemes, the interference is treated as noise and thus
-no advanced signal processing is required. To understand the
-working principle, in Section V-A, we ﬁrst consider a simple
-scenario where there are only two pairs of transmitters and
-receivers. By leveraging information theory, we will show that
-slow FAMA can be capacity-near-optimal. A general setup
-with any number of users will be considered in Section V-B via
-some approximation techniques. In Section V-C, our attention
-then turns to the fast FAMA approach for symbol-level port
-switching for extreme massive connectivity. It is worth noting
-that fast FAMA has the capability of accommodating hundreds
-of users on the same channel while slow FAMA is typically
-not expected to handle 10 users or more. Finally, we introduce
-CUMA, a variant of slow FAMA, that improves the multiple
-access capability with slow port switching. We conclude this
-section by commenting on how FAMA may inspire a scalable
-new multiple access scheme for future mobile networks.
+With position ﬂexibility, FAS can innovate multiple access and change the way in which interference is mitigated. This new technique is referred to as FAMA [73], [74]. Speciﬁcally, unlike existing techniques, FAMA does not require any CSI at the transmitter nor SIC at the receiver. The idea behind FAMA is to enable receiver to access a desirable spatial moment for communications where the interference suffers from deep fade. This is in contrast to usual spatial multiplexing schemes where signals are carefully mixed to create artiﬁcial interference null, as in the case of multiuser or massive MIMO. FAMA can be categorized into two types: slow FAMA [74], [76], [92], [178], [179], [180], [181] and fast FAMA [73], [182], [183]. In slow FAMA, the receiver’s antenna position changes whenever the channel changes while in fast FAMA, the receiver changes its position on a symbol-by-symbol basis. In both schemes, the interference is treated as noise and thus no advanced signal processing is required. To understand the working principle, in Section V-A, we ﬁrst consider a simple scenario where there are only two pairs of transmitters and receivers. By leveraging information theory, we will show that slow FAMA can be capacity-near-optimal. A general setup with any number of users will be considered in Section V-B via some approximation techniques. In Section V-C, our attention then turns to the fast FAMA approach for symbol-level port switching for extreme massive connectivity. It is worth noting that fast FAMA has the capability of accommodating hundreds of users on the same channel while slow FAMA is typically not expected to handle 10 users or more. Finally, we introduce CUMA, a variant of slow FAMA, that improves the multiple access capability with slow port switching. We conclude this section by commenting on how FAMA may inspire a scalable new multiple access scheme for future mobile networks.
 A. Han-Kobayashi (HK) Comparison
-Consider an interference channel in Fig. 29, in which there
-are two pairs of transmitters and receivers. Each transmitter
-aims to send the intended information signal to its respective
-receiver but it interferes with the other receiver. To simplify
-discussion, we assume that each transmitter is equipped with a
-traditional ﬁxed-position antenna while each receiver has a 2D
-FAS with Nrx ports uniformly distributed in a grid structure
-over an area of Wrx. This setup can be viewed as the classical
-two-user Gaussian interference channel if each receiver uses a
-ﬁxed port. In information theory, it is widely known that the
-best achievable scheme of a two-user Gaussian interference
-channel is the HK scheme which uses rate-splitting and joint-
-decoding to perform all possible strategies [184], [185]. It is
-capable of approaching the capacity to within one bit for all
-values of channel conﬁgurations by setting the interference to
+Consider an interference channel in Fig. 29, in which there are two pairs of transmitters and receivers. Each transmitter aims to send the intended information signal to its respective receiver but it interferes with the other receiver. To simplify discussion, we assume that each transmitter is equipped with a traditional ﬁxed-position antenna while each receiver has a 2D FAS with Nrx ports uniformly distributed in a grid structure over an area of Wrx. This setup can be viewed as the classical two-user Gaussian interference channel if each receiver uses a ﬁxed port. In information theory, it is widely known that the best achievable scheme of a two-user Gaussian interference channel is the HK scheme which uses rate-splitting and joint- decoding to perform all possible strategies [184], [185]. It is capable of approaching the capacity to within one bit for all values of channel conﬁgurations by setting the interference to
 
 27
 10
@@ -9068,11 +9013,7 @@ FAS
 TAS
 10dB
 (b)
-Figure 26: The average channel-to-interference ratio compari-
-son of multiuser MIMO-FAS and multiuser MIMO-TAS: a)
-the effect of active ports/antennas, where Ntx = 50 × 50
-and Wtx = 4.5λ × 4.5λ; and b) the effect of Wtx, where
-Ntx = 10ntx × 10ntx and ntx =
+Figure 26: The average channel-to-interference ratio compari- son of multiuser MIMO-FAS and multiuser MIMO-TAS: a) the effect of active ports/antennas, where Ntx = 50 × 50 and Wtx = 4.5λ × 4.5λ; and b) the effect of Wtx, where Ntx = 10ntx × 10ntx and ntx =
 
 2√
 Wtx
@@ -9080,22 +9021,11 @@ Wtx
 
 +1
 2.
-noise level [184]. Intuitively, given the availability of global
-CSI at the transmitters and receivers, it is possible to improve
-the rate performance when optimal rate-splitting and power-
-splitting are computed for each port and the optimal port is
-selected for communications. We refer to this scheme as HK-
-FAMA, which is mainly used for benchmarking [125].
-To understand the working principle of FAMA, we introduce
-the concept of generalized degrees of freedom (gdof) in non-
-symmetric reconﬁgurable channel for FAS with ﬁnite SNR.11
-Speciﬁcally, the gdof of a scheme is deﬁned as
-gdof ≜Rsys (Arx)
+noise level [184]. Intuitively, given the availability of global CSI at the transmitters and receivers, it is possible to improve the rate performance when optimal rate-splitting and power- splitting are computed for each port and the optimal port is selected for communications. We refer to this scheme as HK- FAMA, which is mainly used for benchmarking [125]. To understand the working principle of FAMA, we introduce the concept of generalized degrees of freedom (gdof) in non- symmetric reconﬁgurable channel for FAS with ﬁnite SNR.11 Speciﬁcally, the gdof of a scheme is deﬁned as gdof ≜Rsys (Arx)
 C∗
 ,
 (65)
-11Note that channel reconﬁguration is only useful here when the SNR is
-ﬁnite and not asymptotically high.
+11Note that channel reconﬁguration is only useful here when the SNR is ﬁnite and not asymptotically high.
 0
 20
 40
@@ -9122,11 +9052,7 @@ FAS
 TAS
 Desired Path
 Interference Path
-Figure 27: Normalized array gain of FAS and TAS in different
-directions, with ntx = 8, θ0,des = 90◦(AoA of the desired
-user signal), θ1,int = 84◦(AoA of the ﬁrst interfering signal),
-θ2,int = 103◦(AoA of the second interfering signal), and
-θ3,int = 107◦(AoA of the third interfering signal).
+Figure 27: Normalized array gain of FAS and TAS in different directions, with ntx = 8, θ0,des = 90◦(AoA of the desired user signal), θ1,int = 84◦(AoA of the ﬁrst interfering signal), θ2,int = 103◦(AoA of the second interfering signal), and θ3,int = 107◦(AoA of the third interfering signal).
 10
 20
 30
@@ -9147,11 +9073,7 @@ Number of active ports/antennas
 Channel variation
 FAS
 TAS
-Figure 28: Channel variation comparison for FAS and TAS
-versus the number of active ports/antennas, where Ntx = 50×
-50 and Wtx = 4.5λ × 4.5λ.
-Figure 29: A schematic of HK-FAMA for an interference
-channel with two transmitter-receiver pairs.
+Figure 28: Channel variation comparison for FAS and TAS versus the number of active ports/antennas, where Ntx = 50× 50 and Wtx = 4.5λ × 4.5λ. Figure 29: A schematic of HK-FAMA for an interference channel with two transmitter-receiver pairs.
 
 28
 where
@@ -9171,55 +9093,9 @@ N0
 ,
 (66)
 |huu(arx
-u )|2 is the channel gain between the transmitter and the
-arx
-u -th port of the desired receiver, and Rsys (Arx) is the max-
-imum system sum-rate as a function of the optimal port. The
-gdof can be interpreted as the ratio of the maximum sum-rate
-of a system to the maximum sum-rate without interference.
-Thus, we say that the system has full dof if Rsys (Arx) = C∗,
-i.e., the interference has no effect on the receivers. In contrast,
-the system has zero dof if Rsys (Arx) = 0, i.e., the interference
-affects the system to the extent that no communication is
-possible. In addition, we ﬁnd it useful to deﬁne α and β as the
-ratio of interference-to-noise ratio to SNR, in decibels. These
-variables represent the interference level. If α = β, we have a
-symmetric interference channel. If α or β ≥0, the system is
-operating in the interference-limited regime. Otherwise, it is
-operating in the noise-limited regime where noise dominates.
-We illustrate the sum-rate performance of HK-FAMA and
-FAMA as well as other existing schemes such as HK, orthog-
-onalization (ORTHO) and treating interference as noise (TIN)
-for the two-user interference channel in Fig. 30. Note that the
-performance of HK, ORTHO and TIN can also be obtained in
-FAS by always activating the same port or by setting Nrx = 1.
-As shown in Fig. 30(a), the performance of FAMA approaches
-to that HK-FAMA as Nrx and Wrx increase, meaning that HK
-is unnecessary and FAMA can be near-optimal if Nrx and Wrx
-are sufﬁciently large. To help understand this, we investigate
-the maximum gdof that can be achieved by these schemes over
-different realizations as demonstrated in Fig. 30(b). Here, HK-
-FAMA and FAMA have the ability to reconﬁgure the channel
-in each channel realization (i.e., they can adjust the values of
-α and β by selecting a different port while HK, ORTHO and
-TIN cannot). It can be observed that HK-FAMA and FAMA
-tend to make the values of α and β small to obtain a higher
-gdof, implying that the noise-limited regime is operationally
-more desirable if such channel reconﬁguration is possible. In
-contrast, HK, ORTHO and TIN are unable to reconﬁgure the
-channel because the active port is ﬁxed or Nrx = 1. In other
-words, the performance of those schemes are limited by the
-randomness of the channel conﬁguration in each realization
-while FAS provides receivers the unique ability to reconﬁgure
-the channel to operate in the noise-limited regime.
+u )|2 is the channel gain between the transmitter and the arx u -th port of the desired receiver, and Rsys (Arx) is the max- imum system sum-rate as a function of the optimal port. The gdof can be interpreted as the ratio of the maximum sum-rate of a system to the maximum sum-rate without interference. Thus, we say that the system has full dof if Rsys (Arx) = C∗, i.e., the interference has no effect on the receivers. In contrast, the system has zero dof if Rsys (Arx) = 0, i.e., the interference affects the system to the extent that no communication is possible. In addition, we ﬁnd it useful to deﬁne α and β as the ratio of interference-to-noise ratio to SNR, in decibels. These variables represent the interference level. If α = β, we have a symmetric interference channel. If α or β ≥0, the system is operating in the interference-limited regime. Otherwise, it is operating in the noise-limited regime where noise dominates. We illustrate the sum-rate performance of HK-FAMA and FAMA as well as other existing schemes such as HK, orthog- onalization (ORTHO) and treating interference as noise (TIN) for the two-user interference channel in Fig. 30. Note that the performance of HK, ORTHO and TIN can also be obtained in FAS by always activating the same port or by setting Nrx = 1. As shown in Fig. 30(a), the performance of FAMA approaches to that HK-FAMA as Nrx and Wrx increase, meaning that HK is unnecessary and FAMA can be near-optimal if Nrx and Wrx are sufﬁciently large. To help understand this, we investigate the maximum gdof that can be achieved by these schemes over different realizations as demonstrated in Fig. 30(b). Here, HK- FAMA and FAMA have the ability to reconﬁgure the channel in each channel realization (i.e., they can adjust the values of α and β by selecting a different port while HK, ORTHO and TIN cannot). It can be observed that HK-FAMA and FAMA tend to make the values of α and β small to obtain a higher gdof, implying that the noise-limited regime is operationally more desirable if such channel reconﬁguration is possible. In contrast, HK, ORTHO and TIN are unable to reconﬁgure the channel because the active port is ﬁxed or Nrx = 1. In other words, the performance of those schemes are limited by the randomness of the channel conﬁguration in each realization while FAS provides receivers the unique ability to reconﬁgure the channel to operate in the noise-limited regime.
 B. Slow FAMA: Approximation Techniques
-Here, we continue our discussion of FAMA in the case of
-two users but deviate from the capacity-centric HK compari-
-son. The setup depicted in Fig. 31 is considered, in which each
-transmitter corresponds to a traditional ﬁxed-position antenna
-of a BS and each user has a 2D FAS. A virtue of FAMA is
-that CSI is no longer necessary at the transmitter side and the
-0.5
+Here, we continue our discussion of FAMA in the case of two users but deviate from the capacity-centric HK compari- son. The setup depicted in Fig. 31 is considered, in which each transmitter corresponds to a traditional ﬁxed-position antenna of a BS and each user has a 2D FAS. A virtue of FAMA is that CSI is no longer necessary at the transmitter side and the 0.5
 1
 1.5
 2
@@ -9243,45 +9119,23 @@ TIN
 ORTHO
 (a)
 (b)
-Figure 30: The performance of HK-FAMA, FAMA and other
-existing schemes: a) the effect of Nrx and Wrx on the sum-
-rate, where W rx
+Figure 30: The performance of HK-FAMA, FAMA and other existing schemes: a) the effect of Nrx and Wrx on the sum- rate, where W rx
 2
 = λ and N rx
 2
 = 10; b) the maximum gdof
 over 300 independent channel realizations.
-receiver ends also do not rely on SIC.12 However, in FAMA,
-interference is not completely eliminated. The interest would
-be to understand how much the overall performance is affected
-by the interference. In this model, the u-th user is exclusively
-served by antenna u ∈{1, 2} with a transmit power of Pu. In
-the interference-limited regime, where the interference level is
-much greater than the noise power level, the SINR of the u-th
-user at the arx
-u -th port can be approximated as13
+receiver ends also do not rely on SIC.12 However, in FAMA, interference is not completely eliminated. The interest would be to understand how much the overall performance is affected by the interference. In this model, the u-th user is exclusively served by antenna u ∈{1, 2} with a transmit power of Pu. In the interference-limited regime, where the interference level is much greater than the noise power level, the SINR of the u-th user at the arx u -th port can be approximated as13
 SINRu(arx
 u ) ≈Pu |huu(arx
 u )|2
 P¯u |h¯uu(arx
 u )| 2 ,
 (67)
-where ¯u is the complement of u and h¯uu(arx
-u ) is the complex
-channel coefﬁcient from the ¯u-th antenna to the arx
-u -th port of
-12Evidently, FAS can also be used as a new dof to improve existing multiple
-access schemes, as discussed in the case of NOMA in Section IV-C and
-multiuser MIMO in Section IV-E.
-13We refer to this as the signal-to-interference ratio approximation.
+where ¯u is the complement of u and h¯uu(arx u ) is the complex channel coefﬁcient from the ¯u-th antenna to the arx u -th port of 12Evidently, FAS can also be used as a new dof to improve existing multiple access schemes, as discussed in the case of NOMA in Section IV-C and multiuser MIMO in Section IV-E. 13We refer to this as the signal-to-interference ratio approximation.
 
 29
-Figure 31: A schematic of downlink slow FAMA, where a BS
-is equipped with two traditional ﬁxed-position antennas and
-the two users are equipped with ﬂuid antennas.
-user u. The performance of user u can be generally evaluated
-using the outage probability, approximately given as
-PFAMA
+Figure 31: A schematic of downlink slow FAMA, where a BS is equipped with two traditional ﬁxed-position antennas and the two users are equipped with ﬂuid antennas. user u. The performance of user u can be generally evaluated using the outage probability, approximately given as PFAMA
 out,u (Ru)
 ≈P
 (
@@ -9310,36 +9164,7 @@ h¯uu = [h¯uu(1), . . . , h¯uu(Nrx)]T and K¯uu = ξ2
 ¯uuJu as the
 covariance matrix of h¯uu, where ξ2
 ¯uu denotes the large-scale
-fading from the ¯u-th antenna to user u. According to [89],
-[178], h¯uu can be generated through the eigenvalue decompo-
-sition on Ju and the introduction of 2Nrx i.i.d. Gaussian ran-
-dom variables. We refer to this as the “exact channel model”.
-Under this model, PFAMA
-out,u (Ru) can be analyzed analytically
-but the obtained expression involves Nrx nested integrals,
-which are computationally intractable [178]. To overcome this,
-approximation techniques are required.
-Utilizing the strategies in [89], the exact channel model is
-approximated in two stages, leading to the approximations of
-outage probability in [178]. In the ﬁrst stage, it is recognized
-that the exact channel model is mainly determined by a few
-largest eigenvalues. This allows the approximation of each
-channel coefﬁcient by considering only ˆNrx dominant eigen-
-values, where ˆNrx is considerably smaller than the number
-of ports Nrx. This is known as the ﬁrst-stage approximation,
-providing a closed-form expression for the outage probability.
-However, despite the signiﬁcant simpliﬁcation achieved in this
-stage, the approximated outage probability remains challeng-
-ing to compute since it involves a 4 ˆNrx-fold integral.
-To further simplify the analysis in the second stage, we
-begin by deﬁning a random matrix ˆ
-H¯uu of size Nrx × N1.
-This matrix serves as as an N1-dimensional extension of ˆh¯uu,
-where each column of ˆ
-H¯uu shares the same distribution as
-ˆh¯uu, and different columns are statistically independent. The
-parameter N1 plays a key role in inﬂuencing the accuracy of
-the approximation and requires careful design. Then, another
+fading from the ¯u-th antenna to user u. According to [89], [178], h¯uu can be generated through the eigenvalue decompo- sition on Ju and the introduction of 2Nrx i.i.d. Gaussian ran- dom variables. We refer to this as the “exact channel model”. Under this model, PFAMA out,u (Ru) can be analyzed analytically but the obtained expression involves Nrx nested integrals, which are computationally intractable [178]. To overcome this, approximation techniques are required. Utilizing the strategies in [89], the exact channel model is approximated in two stages, leading to the approximations of outage probability in [178]. In the ﬁrst stage, it is recognized that the exact channel model is mainly determined by a few largest eigenvalues. This allows the approximation of each channel coefﬁcient by considering only ˆNrx dominant eigen- values, where ˆNrx is considerably smaller than the number of ports Nrx. This is known as the ﬁrst-stage approximation, providing a closed-form expression for the outage probability. However, despite the signiﬁcant simpliﬁcation achieved in this stage, the approximated outage probability remains challeng- ing to compute since it involves a 4 ˆNrx-fold integral. To further simplify the analysis in the second stage, we begin by deﬁning a random matrix ˆ H¯uu of size Nrx × N1. This matrix serves as as an N1-dimensional extension of ˆh¯uu, where each column of ˆ H¯uu shares the same distribution as ˆh¯uu, and different columns are statistically independent. The parameter N1 plays a key role in inﬂuencing the accuracy of the approximation and requires careful design. Then, another
 10
 20
 30
@@ -9356,45 +9181,14 @@ the approximation and requires careful design. Then, another
 10-1
 100
 Outage probability
-Figure 32: Outage probability and the ﬁrst-stage approxima-
-tion, where γth = 5 dB, P¯u = Pu, and ˆNrx = 10.
+Figure 32: Outage probability and the ﬁrst-stage approxima- tion, where γth = 5 dB, P¯u = Pu, and ˆNrx = 10.
 random matrix ¯
 H¯uu of the same size, featuring independent
 rows and dependent columns, is introduced. The similarity
 between ¯
 H¯uu and ˆ
 H¯uu is quantiﬁed by measuring the distance
-between their covariance matrices, a metric minimized through
-the appropriate design of N1. This new model allows for an
-approximation of the outage probability expressed as a 2-fold
-integral in closed form, which is easy to compute.
-In Figs. 32 and 33, the approximations are evaluated. In
-the simulation results, we consider a 1D FAS with Nrx ports
-and a length of Wrxλ at each user. As observed, when Wrx is
-small (e.g., Wrx = 1), the outage probability remains almost
-constant as Nrx increases. In contrast, when Wrx is sufﬁciently
-large, the outage probability initially decreases greatly with
-Nrx before it gradually saturates. This observation reveals that
-an excessive increase in Nrx does not yield additional gains
-when Wrx is ﬁxed, which resembles the behavior observed in
-a point-to-point FAS where only a maximum diversity can be
-achieved for a ﬁxed Wrx. Evidently, the results illustrate that
-the outage probability signiﬁcantly decreases as Wrx increases.
-This indicates that increasing the size of FAS can signiﬁcantly
-enhance the performance of FAMA, especially when Wrx is
-small. The comparison between the results in the two ﬁgures
-also discovers distinct performance characteristics of the two
-approximation strategies. With a well-designed N1, the curves
-obtained by the ﬁrst-stage approximation almost coincide with
-those obtained by the exact channel model. As for the second-
-stage approximation, despite being not as accurate as the ﬁrst
-scheme, it exhibits a relatively good performance when the
-outage probability is above 10−6. Readers are referred to [178]
-for more technical details and mathematical expressions.
-Certainly, FAMA can handle more than two users, and as
-considered above, this belongs to the slow version of FAMA
-where the port is selected based on maximizing the received
-SINR at each user. That is, at the u-th user, it aims to ﬁnd
+between their covariance matrices, a metric minimized through the appropriate design of N1. This new model allows for an approximation of the outage probability expressed as a 2-fold integral in closed form, which is easy to compute. In Figs. 32 and 33, the approximations are evaluated. In the simulation results, we consider a 1D FAS with Nrx ports and a length of Wrxλ at each user. As observed, when Wrx is small (e.g., Wrx = 1), the outage probability remains almost constant as Nrx increases. In contrast, when Wrx is sufﬁciently large, the outage probability initially decreases greatly with Nrx before it gradually saturates. This observation reveals that an excessive increase in Nrx does not yield additional gains when Wrx is ﬁxed, which resembles the behavior observed in a point-to-point FAS where only a maximum diversity can be achieved for a ﬁxed Wrx. Evidently, the results illustrate that the outage probability signiﬁcantly decreases as Wrx increases. This indicates that increasing the size of FAS can signiﬁcantly enhance the performance of FAMA, especially when Wrx is small. The comparison between the results in the two ﬁgures also discovers distinct performance characteristics of the two approximation strategies. With a well-designed N1, the curves obtained by the ﬁrst-stage approximation almost coincide with those obtained by the exact channel model. As for the second- stage approximation, despite being not as accurate as the ﬁrst scheme, it exhibits a relatively good performance when the outage probability is above 10−6. Readers are referred to [178] for more technical details and mathematical expressions. Certainly, FAMA can handle more than two users, and as considered above, this belongs to the slow version of FAMA where the port is selected based on maximizing the received SINR at each user. That is, at the u-th user, it aims to ﬁnd
 (arx
 u )∗= arg
 max
@@ -9426,33 +9220,9 @@ u )|2 + N0
 10-2
 100
 Outage probability
-Figure 33: Outage probability and the second-stage approxi-
-mation, where γth = 5 dB, P¯u = Pu and ˆNrx = 10.
-In the general case with any number of users, the outage
-probability for slow FAMA has been analyzed in [74] and the
-performance analysis of FAMA in conjuction with opportunis-
-tic scheduling was also further given in [75] but under the
-simpliﬁed channel model in Section II-A. Most recently, an
-accurate performance evaluation for the general slow FAMA
-was accomplished using the new block-correlation model in
-[90]. ML-based approaches that perform joint optimization of
-port selection and scheduling can also be found in [76].
-In short, the huge diversity gain of FAS can be exploited
-and translated into an uncanny ability to mitigate interference,
-under the concept of FAMA without requiring SIC at the users
-nor CSI at the transmitter for precoding optimization.
+Figure 33: Outage probability and the second-stage approxi- mation, where γth = 5 dB, P¯u = Pu and ˆNrx = 10. In the general case with any number of users, the outage probability for slow FAMA has been analyzed in [74] and the performance analysis of FAMA in conjuction with opportunis- tic scheduling was also further given in [75] but under the simpliﬁed channel model in Section II-A. Most recently, an accurate performance evaluation for the general slow FAMA was accomplished using the new block-correlation model in [90]. ML-based approaches that perform joint optimization of port selection and scheduling can also be found in [76]. In short, the huge diversity gain of FAS can be exploited and translated into an uncanny ability to mitigate interference, under the concept of FAMA without requiring SIC at the users nor CSI at the transmitter for precoding optimization.
 C. Fast FAMA: Symbol-Level Switching
-In fact, the ﬁrst version of FAMA in [73] implies fast port
-switching on a per-symbol basis. This is in contrast to the slow
-FAMA approach [74] that chooses the best port to adapt to the
-instantaneous channel conditions for the maximum received
-SINR, i.e., (69). If the CSI remains unchanged, slow FAMA
-keeps the same port selection, which is understandably more
-practical. This is not the case for fast FAMA, in which each
-FAS-enabled user chooses the port that maximizes the ratio
-between the instantaneous desired user’s signal energy and the
-energy of the instantaneous sum-interference plus noise signal
-for a much approved multiple access capability, i.e.,
+In fact, the ﬁrst version of FAMA in [73] implies fast port switching on a per-symbol basis. This is in contrast to the slow FAMA approach [74] that chooses the best port to adapt to the instantaneous channel conditions for the maximum received SINR, i.e., (69). If the CSI remains unchanged, slow FAMA keeps the same port selection, which is understandably more practical. This is not the case for fast FAMA, in which each FAS-enabled user chooses the port that maximizes the ratio between the instantaneous desired user’s signal energy and the energy of the instantaneous sum-interference plus noise signal for a much approved multiple access capability, i.e.,
 (arx
 u )∗= arg
 max
@@ -9468,370 +9238,36 @@ u )
 
 2 .
 (70)
-A major difference from (69) is that here in fast FAMA, the
-solution to (70) is data-dependent and speciﬁcally a function of
-the data from the interfering users and even the noise sample.
-In terms of interference mitigation, fast FAMA exceeds slow
-FAMA by a huge margin. The reason is that for slow FAMA,
-it relies on the existence of some port where the sum of the
-interference power is weak, which is not likely as the number
+A major difference from (69) is that here in fast FAMA, the solution to (70) is data-dependent and speciﬁcally a function of the data from the interfering users and even the noise sample. In terms of interference mitigation, fast FAMA exceeds slow FAMA by a huge margin. The reason is that for slow FAMA, it relies on the existence of some port where the sum of the interference power is weak, which is not likely as the number
 (a)
 (b)
-Figure 34: Data rates of a) slow FAMA and b) fast FAMA
-against the number of UEs with varying sizes and resolutions
-of FAS at each UE. Each UE is equipped with a 2D FAS
-offering Nrx = N rx
+Figure 34: Data rates of a) slow FAMA and b) fast FAMA against the number of UEs with varying sizes and resolutions of FAS at each UE. Each UE is equipped with a 2D FAS offering Nrx = N rx
 1 × N rx
 2
-ﬂexible positions or ports. The
-data rate is computed assuming binary symmetric channels,
-employing uncoded QPSK transmissions. The system operates
-at a frequency of 39 GHz and the channel has a Rice factor
-of 7 with two scattered paths, i.e, K = 7 and Lp = 2.
-of interfering users becomes large. On the contrary, the sum-
-interference plus noise signal is complex Gaussian distributed,
-which is particularly true when U is large. This implies that
-the magnitude of the sum-signal will be Rayleigh distributed
-and deep fade does occur. In other words, there will be natural
-phenomenon that on a per-symbol scale, the sum-interference
-plus noise signal will vanish at some port. Fast FAMA (70) is
-designed to exploit this phenomenon which is impossible for
-slow FAMA and that explains its increased capability.
-The results in Figs. 34(a) and 34(b) investigate the average
-network rate performance of both slow and fast FAMA under
-ﬁnite scattering channels with Rice factor K = 7 and 2 scat-
-tered paths and considering QPSK transmission. The channel
-
-31
-conditions reﬂect what would typically feature in the mmWave
-band. In the simulations, we considered 39 GHz. The network
-rate was obtained by estimating the bit error rate, then com-
-puting the channel capacity of a binary symmetric channel and
-averaging over a lot of independent channel realizations. Two
-FAS sizes are considered, i.e., (W rx
+ﬂexible positions or ports. The data rate is computed assuming binary symmetric channels, employing uncoded QPSK transmissions. The system operates at a frequency of 39 GHz and the channel has a Rice factor of 7 with two scattered paths, i.e, K = 7 and Lp = 2.
+of interfering users becomes large. On the contrary, the sum- interference plus noise signal is complex Gaussian distributed, which is particularly true when U is large. This implies that the magnitude of the sum-signal will be Rayleigh distributed and deep fade does occur. In other words, there will be natural phenomenon that on a per-symbol scale, the sum-interference plus noise signal will vanish at some port. Fast FAMA (70) is designed to exploit this phenomenon which is impossible for slow FAMA and that explains its increased capability. The results in Figs. 34(a) and 34(b) investigate the average network rate performance of both slow and fast FAMA under ﬁnite scattering channels with Rice factor K = 7 and 2 scat- tered paths and considering QPSK transmission. The channel conditions reﬂect what would typically feature in the mmWave band. In the simulations, we considered 39 GHz. The network rate was obtained by estimating the bit error rate, then com- puting the channel capacity of a binary symmetric channel and averaging over a lot of independent channel realizations. Two FAS sizes are considered, i.e., (W rx
 1 , W rx
 2 ) = (10 cm, 10 cm)
-or (30 cm, 30 cm). The former represents the size of a typical
-handheld device while the latter may be interpreted as the size
-of a laptop. As can be seen, for both slow and fast FAMA, the
-network rate will increase, if the FAS size increases and/or its
-port resolution increases. It is worth pointing out that if we
-continue to increase the port resolution, then the rate will not
-increase without bound, as already reported in single-user [89],
-[93] and multiuser systems [90], [178]. On the other hand, it
-is observed that the network rate generally increases with the
-number of users but will eventually plateau if there are too
-many users, exceeding the capability of FAMA. The results
-indicate that slow FAMA can handle 6 co-channel users if the
-size is (W rx
-1 , W rx
-2 ) = (10 cm, 10 cm). This number can be
-increased to 9 users if the size becomes (30 cm, 30 cm). The
-results for fast FAMA are even more impressive and hundreds
-of users can be accommodated. The results demonstrate that
-fast FAMA can deal with 300 users (with a smaller FAS) and
-serving 500 users is possible if a larger FAS is allowed.
-Despite the unbelievable multiple access capability without
-CSI at the transmitter side, fast FAMA is not practically ready
-because it is indeed a challenge for each UE to estimate the
-energy ratio in (70) for the maximization and then switch to
-the optimal port instantly. Recent attempts have addressed this
-to some extent if the CSI of the desired user’s channel and the
-received signals at all the ports are perfectly known [182]. On
-the other hand, the concept of virtual FAS in [186] is expected
-to be useful to estimate the received signals at the unobserved
-ports if only a subset of ports are observable. Overall, however,
-it is fair to say that this remains largely an open problem.
+or (30 cm, 30 cm). The former represents the size of a typical handheld device while the latter may be interpreted as the size of a laptop. As can be seen, for both slow and fast FAMA, the network rate will increase, if the FAS size increases and/or its port resolution increases. It is worth pointing out that if we continue to increase the port resolution, then the rate will not increase without bound, as already reported in single-user [89], [93] and multiuser systems [90], [178]. On the other hand, it is observed that the network rate generally increases with the number of users but will eventually plateau if there are too many users, exceeding the capability of FAMA. The results indicate that slow FAMA can handle 6 co-channel users if the size is (W rx 1 , W rx 2 ) = (10 cm, 10 cm). This number can be increased to 9 users if the size becomes (30 cm, 30 cm). The results for fast FAMA are even more impressive and hundreds of users can be accommodated. The results demonstrate that fast FAMA can deal with 300 users (with a smaller FAS) and serving 500 users is possible if a larger FAS is allowed. Despite the unbelievable multiple access capability without CSI at the transmitter side, fast FAMA is not practically ready because it is indeed a challenge for each UE to estimate the energy ratio in (70) for the maximization and then switch to the optimal port instantly. Recent attempts have addressed this to some extent if the CSI of the desired user’s channel and the received signals at all the ports are perfectly known [182]. On the other hand, the concept of virtual FAS in [186] is expected to be useful to estimate the received signals at the unobserved ports if only a subset of ports are observable. Overall, however, it is fair to say that this remains largely an open problem.
 D. CUMA: An Enhancement to Slow FAMA
-As discussed above, slow FAMA is practical but has limited
-multiple access capability while fast FAMA is not known to
-be practically realizable despite its extraordinary connectivity.
-Therefore, there is desire to keep the practicality but improve
-the performance of slow FAMA, which has led to the CUMA
-technique in [77]. In CUMA, rather than focusing on one best
-port for reception, a large number of ports are activated and
-their signals are summed in the analogue domain to produce
-the output signal for detection. The key is to select the correct
-ports w
+As discussed above, slow FAMA is practical but has limited multiple access capability while fast FAMA is not known to be practically realizable despite its extraordinary connectivity. Therefore, there is desire to keep the practicality but improve the performance of slow FAMA, which has led to the CUMA technique in [77]. In CUMA, rather than focusing on one best port for reception, a large number of ports are activated and their signals are summed in the analogue domain to produce the output signal for detection. The key is to select the correct ports w
 ```
 
 ### Section VIII: Promising Research Directions in FAS (extracted)
 
 
 VIII. PROMISING RESEARCH DIRECTIONS IN FAS
-This section is dedicated to the discussion of new challenges
-as well as the promising research directions in FAS. We will
-begin by considering the new challenges of FAS, spanning
-from channel models and estimations to theoretical founda-
-tions and performance limits. Then, we will deliberate on var-
-ious promising research directions, focusing on the interaction
-between FAS and other state-of-the-art technologies such as
-AI, full-duplex (FD) communications, green communications,
-ISAC, near-ﬁeld communications, NGMA, NTN, PLS, RIS,
-THz communications and XL-MIMO or CAP-MIMO.
+This section is dedicated to the discussion of new challenges as well as the promising research directions in FAS. We will begin by considering the new challenges of FAS, spanning from channel models and estimations to theoretical founda- tions and performance limits. Then, we will deliberate on var- ious promising research directions, focusing on the interaction between FAS and other state-of-the-art technologies such as AI, full-duplex (FD) communications, green communications, ISAC, near-ﬁeld communications, NGMA, NTN, PLS, RIS, THz communications and XL-MIMO or CAP-MIMO.
 A. New Challenges within FAS
-1) Hardware Development and System Models: This paper
-mainly focuses on theoretical channel models, as empirical
-channel models are currently lacking within the ﬁeld of FAS.
-Developing an empirical channel model requires conducting
-numerous channel measurements, a process contingent on the
-maturity of FAS devices. However, the current state of FAS
-devices remains in its infancy, with existing prototypes not
-yet ready for practical applications, although dedicated efforts
-have been given in this matter [81], [82], [209], [210], [211],
-[237]. Addressing this challenge requires collaborative efforts
-from physicists, electromagnetic specialists, and antenna ex-
-perts to create reliable FAS prototypes and conduct compre-
-hensive channel measurements across various environments.
-The measurement data can then be employed to construct
-empirical channel models tailored to different settings.
-Also, our tutorial places primary emphasis on the spatial
-correlation of the ports but it is imperative to recognize that
-correlation exists not only in the spatial domain but also in the
-time and frequency domains. Recent developments have led
-to a temporal-spatial correlation model [122] and frequency-
-spatial correlation model [98]. But there is a need for a com-
-prehensive joint frequency-temporal-spatial correlation model,
-which has the potential to further enhance the performance of
-FAS. The development of theoretical channel models should
-also account for near-ﬁeld spherical wave effects, atmospheric
-conditions, weather variations, and other environmental fac-
-tors, especially when dealing with THz communications [238],
-[239]. In addition, mutual coupling emerges as a signiﬁcant
-challenge, particularly for pixel-based ﬂuid antennas. Strate-
-gies such as leveraging circuit and antenna theories, which
-involve matching networks and employing isolation techniques
-in antenna design, can help mitigate mutual coupling effects
-[189], [190], [240]. Furthermore, the response time or switch-
-ing time of the ﬂuid antenna plays a crucial role in determining
-the performance of FAS [241]. While studies like [119], [242]
-indicated that the switching time issue could be addressed
-in liquid-based antenna designs, an alternative direction may
-emphasize on delay-free ﬂuid antenna designs.
-2) System Management and Optimization: To ensure seam-
-less operation of FAS within 6G networks, it is imperative to
-design an optimal system management. As discussed earlier,
-FAS needs to estimate the channels of a subset of ports to
-reconstruct the CSI of all ports. In this context, advanced
-techniques such as ML and various mathematical approaches,
-have demonstrated highly efﬁcient capabilities in reducing the
-required channel acquisition to only 10 −20% of all the ports
-[122], [124], [148], [179]. However, the minimum number of
-observable ports necessary to satisfactorily recover the CSI for
-different conﬁgurations of the ﬂuid antenna surface remains
-unknown, including different size and dimensions.
-One possible approach to answer this question is to leverage
-the Nyquist-Shannon sampling theorem, which outlines the
-requirements for accurately reconstructing a continuous signal
-from its sampled, discrete version without loss of informa-
-tion. According to this theorem, to accurately reconstruct a
-continuous signal, the sampling rate must be at least twice
-the highest frequency present in the signal [243]. This implies
-that an efﬁcient FAS needs to obtain information about the
-frequency of the fading in each channel realization to estimate
-the channel with the minimum number of ports efﬁciently.
-However, achieving this remains a non-trivial problem.
-Another approach is to explore the functional dof from elec-
-tromagnetic information theory. In electromagnetic informa-
-tion theory, the functional dof refers to the minimum number
-of required samples to reconstruct a given electromagnetic
-ﬁeld [244], [245]. Contemporary studies postulate that half
-a wavelength is sufﬁcient to reconstruct a continuous ﬁeld
-[246], [247]. Nevertheless, a preliminary investigation in FAS
-reveals otherwise, as the signal is space-limited and the spatial
-frequency spans over an inﬁnite range. Hence, sampling less
-than half a wavelength can signiﬁcantly reduce the NMSE.
-This suggests that achieving perfect channel reconstruction
-based on half-wavelength sampling is still an open issue.
-While the above knowledge may ﬁll an important gap, it
-is crucial to recognize that the number of channels in FAS is
-signiﬁcantly larger than that in TAS. As a matter of fact, this
-key distinction serves as the primary factor contributing to the
-superior performance of FAS, even when both systems have
-an identical number of radiating elements. However, managing
-and optimizing such an extreme number of channels introduces
-complexity. While ML methods offer scalability beneﬁts, con-
-ventional management and mathematical optimization meth-
-ods should not be overlooked for the sake of tractability. In
-other words, striking a balance between advanced techniques
-like ML for scalability and conventional or mathematical ap-
-proaches for tractability is vital in addressing the management
-
-40
-and optimization complexities associated with the increased
-number of channels in FAS, especially within the evolving
-landscape of 6G networks. Without exacerbating matters, the
-handover process might also become more challenging due
-to the channel reconﬁguration capability that can complicate
-decision-making [248]. Therefore, extensive efforts are still
-required in the management and optimization of FAS.
-3) Theoretical Foundations and Performance Limits: In this
-tutorial paper, we have delved into various technical aspects of
-FAS, exploring topics such as extreme diversity gain, higher
-energy efﬁciency, and innovative techniques enabling scalable
-multiple access without CSI at the transmitter and SIC at the
-receiver. Nevertheless, fundamental investigations still remain
-in certain areas. For example, obtaining N ′ (W) (see (49))
-is a non-trivial task, although efforts have been given in this
-state-of-affair [93], [94]. It is important to note that N ′ (W)
-is not the number of independent channels or functional dof,
-rather it is the number of signiﬁcant eigenvalues that can
-enhance diversity. The current approach relies on approximat-
-ing the non-negligible eigenvalues of the FAS channel under
-the assumption that the number of ports is extremely large,
-approaching inﬁnity. However, this approach is often hindered
-by numerical issues, and numerical analysis techniques can
-be employed to improve the approximation [249]. Another
-alternative is to directly employ functional analysis.
-Furthermore, the analysis of FAS performance proves to be
-extremely difﬁcult in many cases [250], [251], [252], [253],
-[254], [255], [256]. Making this matter worse, even minor
-adjustments to the system model can render the problem in-
-tractable. Therefore, novel approaches are crucial for effective
-performance analysis. Moreover, it is observed that the rate
-does not show drastic improvement simply by increasing the
-number of ports or the size of the ﬂuid antenna surface.
-Consequently, innovative solutions are still required to enhance
-the network multiplexing gain, meeting the demands of mas-
-sive communication. Additionally, the superior performance
-of FAS-NOMA is applicable only when the access point has
-a single antenna. In cases where the access point is equipped
-with multiple antennas, RSMA may be more efﬁcient in some
-cases [71]. Thus, exploring the integration of FAS and RSMA,
-and other multiple access schemes remains of great interest.
-Under the assumption that CSI and SIC are unavailable at
-the transmitter and receivers, respectively, FAMA opens up
-new possibilities for multiple access techniques. But relying on
-straightforward concepts like slow FAMA or fast FAMA solely
-may not be sufﬁcient to achieve TKµ extreme connectivity as
-these schemes are still interference-limited. In fact, the pursuit
-of TKµ extreme connectivity calls for the development of more
-advanced schemes. In this context, CUMA or other variations
-of FAMA could play more pivotal roles. For instance, CUMA
-presents the potential to achieve 1 Kbps/Hz by serving one
-thousand users per a frequency-time resource. Nevertheless,
-analyzing the performance of CUMA in the presence of mutual
-coupling or computing the performance at an extreme scale
-poses considerable challenges. Moreover, the development of
-more innovative solutions would be encouraging in advancing
-the quest for TKµ extreme connectivity. Lastly, developing
-stochastic geometry frameworks that consider accurate spatial
-correlation, mutual coupling, and optimization effects can be
-immensely valuable since it allows researchers to evaluate the
-impacts of large-scale deployment in future 6G networks.
+1) Hardware Development and System Models: This paper mainly focuses on theoretical channel models, as empirical channel models are currently lacking within the ﬁeld of FAS. Developing an empirical channel model requires conducting numerous channel measurements, a process contingent on the maturity of FAS devices. However, the current state of FAS devices remains in its infancy, with existing prototypes not yet ready for practical applications, although dedicated efforts have been given in this matter [81], [82], [209], [210], [211], [237]. Addressing this challenge requires collaborative efforts from physicists, electromagnetic specialists, and antenna ex- perts to create reliable FAS prototypes and conduct compre- hensive channel measurements across various environments. The measurement data can then be employed to construct empirical channel models tailored to different settings. Also, our tutorial places primary emphasis on the spatial correlation of the ports but it is imperative to recognize that correlation exists not only in the spatial domain but also in the time and frequency domains. Recent developments have led to a temporal-spatial correlation model [122] and frequency- spatial correlation model [98]. But there is a need for a com- prehensive joint frequency-temporal-spatial correlation model, which has the potential to further enhance the performance of FAS. The development of theoretical channel models should also account for near-ﬁeld spherical wave effects, atmospheric conditions, weather variations, and other environmental fac- tors, especially when dealing with THz communications [238], [239]. In addition, mutual coupling emerges as a signiﬁcant challenge, particularly for pixel-based ﬂuid antennas. Strate- gies such as leveraging circuit and antenna theories, which involve matching networks and employing isolation techniques in antenna design, can help mitigate mutual coupling effects [189], [190], [240]. Furthermore, the response time or switch- ing time of the ﬂuid antenna plays a crucial role in determining the performance of FAS [241]. While studies like [119], [242] indicated that the switching time issue could be addressed in liquid-based antenna designs, an alternative direction may emphasize on delay-free ﬂuid antenna designs.
+2) System Management and Optimization: To ensure seam- less operation of FAS within 6G networks, it is imperative to design an optimal system management. As discussed earlier, FAS needs to estimate the channels of a subset of ports to reconstruct the CSI of all ports. In this context, advanced techniques such as ML and various mathematical approaches, have demonstrated highly efﬁcient capabilities in reducing the required channel acquisition to only 10 −20% of all the ports [122], [124], [148], [179]. However, the minimum number of observable ports necessary to satisfactorily recover the CSI for different conﬁgurations of the ﬂuid antenna surface remains unknown, including different size and dimensions. One possible approach to answer this question is to leverage the Nyquist-Shannon sampling theorem, which outlines the requirements for accurately reconstructing a continuous signal from its sampled, discrete version without loss of informa- tion. According to this theorem, to accurately reconstruct a continuous signal, the sampling rate must be at least twice the highest frequency present in the signal [243]. This implies that an efﬁcient FAS needs to obtain information about the frequency of the fading in each channel realization to estimate the channel with the minimum number of ports efﬁciently. However, achieving this remains a non-trivial problem. Another approach is to explore the functional dof from elec- tromagnetic information theory. In electromagnetic informa- tion theory, the functional dof refers to the minimum number of required samples to reconstruct a given electromagnetic ﬁeld [244], [245]. Contemporary studies postulate that half a wavelength is sufﬁcient to reconstruct a continuous ﬁeld [246], [247]. Nevertheless, a preliminary investigation in FAS reveals otherwise, as the signal is space-limited and the spatial frequency spans over an inﬁnite range. Hence, sampling less than half a wavelength can signiﬁcantly reduce the NMSE. This suggests that achieving perfect channel reconstruction based on half-wavelength sampling is still an open issue. While the above knowledge may ﬁll an important gap, it is crucial to recognize that the number of channels in FAS is signiﬁcantly larger than that in TAS. As a matter of fact, this key distinction serves as the primary factor contributing to the superior performance of FAS, even when both systems have an identical number of radiating elements. However, managing and optimizing such an extreme number of channels introduces complexity. While ML methods offer scalability beneﬁts, con- ventional management and mathematical optimization meth- ods should not be overlooked for the sake of tractability. In other words, striking a balance between advanced techniques like ML for scalability and conventional or mathematical ap- proaches for tractability is vital in addressing the management  and optimization complexities associated with the increased number of channels in FAS, especially within the evolving landscape of 6G networks. Without exacerbating matters, the handover process might also become more challenging due to the channel reconﬁguration capability that can complicate decision-making [248]. Therefore, extensive efforts are still required in the management and optimization of FAS.
+3) Theoretical Foundations and Performance Limits: In this tutorial paper, we have delved into various technical aspects of FAS, exploring topics such as extreme diversity gain, higher energy efﬁciency, and innovative techniques enabling scalable multiple access without CSI at the transmitter and SIC at the receiver. Nevertheless, fundamental investigations still remain in certain areas. For example, obtaining N ′ (W) (see (49)) is a non-trivial task, although efforts have been given in this state-of-affair [93], [94]. It is important to note that N ′ (W) is not the number of independent channels or functional dof, rather it is the number of signiﬁcant eigenvalues that can enhance diversity. The current approach relies on approximat- ing the non-negligible eigenvalues of the FAS channel under the assumption that the number of ports is extremely large, approaching inﬁnity. However, this approach is often hindered by numerical issues, and numerical analysis techniques can be employed to improve the approximation [249]. Another alternative is to directly employ functional analysis. Furthermore, the analysis of FAS performance proves to be extremely difﬁcult in many cases [250], [251], [252], [253], [254], [255], [256]. Making this matter worse, even minor adjustments to the system model can render the problem in- tractable. Therefore, novel approaches are crucial for effective performance analysis. Moreover, it is observed that the rate does not show drastic improvement simply by increasing the number of ports or the size of the ﬂuid antenna surface. Consequently, innovative solutions are still required to enhance the network multiplexing gain, meeting the demands of mas- sive communication. Additionally, the superior performance of FAS-NOMA is applicable only when the access point has a single antenna. In cases where the access point is equipped with multiple antennas, RSMA may be more efﬁcient in some cases [71]. Thus, exploring the integration of FAS and RSMA, and other multiple access schemes remains of great interest. Under the assumption that CSI and SIC are unavailable at the transmitter and receivers, respectively, FAMA opens up new possibilities for multiple access techniques. But relying on straightforward concepts like slow FAMA or fast FAMA solely may not be sufﬁcient to achieve TKµ extreme connectivity as these schemes are still interference-limited. In fact, the pursuit of TKµ extreme connectivity calls for the development of more advanced schemes. In this context, CUMA or other variations of FAMA could play more pivotal roles. For instance, CUMA presents the potential to achieve 1 Kbps/Hz by serving one thousand users per a frequency-time resource. Nevertheless, analyzing the performance of CUMA in the presence of mutual coupling or computing the performance at an extreme scale poses considerable challenges. Moreover, the development of more innovative solutions would be encouraging in advancing the quest for TKµ extreme connectivity. Lastly, developing stochastic geometry frameworks that consider accurate spatial correlation, mutual coupling, and optimization effects can be immensely valuable since it allows researchers to evaluate the impacts of large-scale deployment in future 6G networks.
 B. Synergy of FAS and Other Technologies
-1) AI: ML techniques can play essential roles in tackling
-the complexity and scalability challenges when serving multi-
-ple FAS users. Techniques such as CNN, GNN, LSTM and re-
-inforcement learning, among others, play crucial roles in tasks
-such as channel estimation, resource allocation optimization,
-handover procedures, task-oriented management, and more
-[124], [175], [179], [257]. For instance, unsupervised learning
-can autonomously discover joint frequency-temporal-spatial
-correlations, optimizing the performance of FAS [85]. Deep
-learning can classify index patterns for FAS based on index
-modulation, a system proposed in [258], [259], [260], [261],
-or explore optimal ports for beamforming [124]. ML has also
-proven valuable for handover and task-oriented management,
-particularly in systems with massive channels [262]. Con-
-versely, FAS can improve the performance of AI applications
-such as computation accuracy, as evidenced in [263], [264].
-Interestingly, FAS applications in autonomous vehicles and
-unmanned aerial vehicles (UAVs) show tremendous potential,
-given that the positions of both the radiating elements and the
-communication objects themselves can be controlled [67].
-2) FD Communications: Compared to conventional half-
-duplex communications, FD communications is a promising
-technology that can potentially double the spectral efﬁciency.
-This capability has garnered signiﬁcant interest from both the
-research community and the industry [265]. The combination
-of FAS and FD communications holds the potential for mutual
-beneﬁts. Although FD communications is anticipated to boost
-the network spectral efﬁciency by overlapping the uplink and
-downlink signals if self-interference can be mitigated, this in-
-troduces both intra- and inter-cell interference, posing a threat
-to the performance of large-scale multi-cell networks. The
-extra dof by FAS can thus be important to address multiuser
-interference by selecting the port that either maximizes the
-SINR or experiences minimal interference. For instance, [266]
-adopted a multi-port ﬂuid antenna technology to propose a co-
-operative communication strategy to elevate the performance
-of a multiuser FD NOMA network. Moreover, an analytical
-framework utilizing stochastic geometry has been derived to
-evaluate the outage and average sum-rate performance of ﬂuid
-antenna-assisted FD cellular networks [128].
-3) Green Communications: As global warming and climate
-change pose serious concerns, researchers are actively explor-
-ing techniques to make wireless communication systems more
-sustainable. In this context, FAS has emerged as a valuable
-technology. On the one hand, FAS can minimize transmission
-power while meeting user rate requirements [166], [167],
-[168]. On the other hand, FAS can maximize energy efﬁciency
-in various scenarios [180], [267], thanks to the diversity gains
-it offers. Furthermore, a paradigm shift from traditional infor-
-mation transmission to power transfer has occurred, inﬂuenced
-by groundbreaking works such as [268] and [269]. Neverthe-
-less, wireless information transfer and power transfer exhibit
-
-41
-distinct behaviors. For instance, interference can be utilized to
-enhance received power for energy harvesting, as suggested by
-[270], but high received power does not necessarily translate
-to maximum information transfer. Conventional approaches
-typically focus on maximizing either wireless information or
-power transfer, using techniques like power allocation, beam-
-forming, and time switching or power splitting. In contrast,
-FAS introduces a novel approach to address this tradeoff [271],
-[272]. Speciﬁcally, the SINR and received power over the ports
-in FAS exhibit different trends. This unique capability of FAS
-suggests that speciﬁc ports can be dedicated to maximizing the
-SINR for information reception, while others can be assigned
-to maximize the harvested energy [85].
-4) ISAC: Cellular networks have undergone a transforma-
-tion, shifting from their initial purpose of providing commu-
-nication services to becoming ISAC networks, also referred
-to as dual-functional radar-communication networks. The ul-
-timate goal of ISAC is to create perceptive mobile networks
-where both communication and radar sensing functions are
-seamlessly combined within a single system that shares the
-same frequency band and hardware. The sensing operation of
-ISAC involves extracting essential information about targets
-and their surroundings. Notably, MIMO schemes have gained
-widespread recognition for their pivotal role in this conﬁgu-
-ration because they offer precoding capabilities for achieving
-spatial beamforming and waveform shaping [273].
-Presumably, FAS could provide an additional dimension for
-enhancing the performance of ISAC [124]. Speciﬁcally, for
-ISAC transmitter, we can employ FAS to optimize the ports
-and precoder jointly to establish favorable communication and
-sensing channels for performing sensing and communications
-simultaneously. On the other hand, for ISAC receiver, we can
-employ slow or fast FAMA to leverage the variations in the
-channel envelope to eliminate interference due to radar sensing
-[74], [182]. Also, FAS enables a ﬂexible coexisting approach
-to use the spatial resources for realizing radar sensing and
-communications simultaneously. In fact, the greatest impedi-
-ment for the ISAC network is to balance communication and
-sensing performance of the dual-functional waveform [274].
-FAS provides a novel approach to unify the communication
-and sensing functionality by creating an ISAC channel that
-can make them reinforce each other. In particular, the spatial
-steering vectors of the sensing and communication channels
-can be aligned using FAS. In such cases, the functionalities of
-communication and sensing can be achieved with a common
-signal waveform, simplifying the network design signiﬁcantly.
-Furthermore, since the communication waveform can be uti-
-lized for sensing directly, removing the need for dedicated
-signals for sensing, the interference due to the sensing require-
-ment can be reduced greatly. A crucial challenge in a FAS-
-assisted ISAC system is however the need to optimize the port
-and beamforming jointly, which is an NP-hard optimization
-problem. In [124], a deep reinforcement learning and pointer
-network was proposed to build an end-to-end learning network
-for addressing the intractable joint optimization problem.
-5) Near-Field Communications: Traditionally, wireless sys-
-tems are assumed to operate in the far ﬁeld, where the wave-
-front can be approximated using planar waves. However, with
+1) AI: ML techniques can play essential roles in tackling the complexity and scalability challenges when serving multi- ple FAS users. Techniques such as CNN, GNN, LSTM and re- inforcement learning, among others, play crucial roles in tasks such as channel estimation, resource allocation optimization, handover procedures, task-oriented management, and more [124], [175], [179], [257]. For instance, unsupervised learning can autonomously discover joint frequency-temporal-spatial correlations, optimizing the performance of FAS [85]. Deep learning can classify index patterns for FAS based on index modulation, a system proposed in [258], [259], [260], [261], or explore optimal ports for beamforming [124]. ML has also proven valuable for handover and task-oriented management, particularly in systems with massive channels [262]. Con- versely, FAS can improve the performance of AI applications such as computation accuracy, as evidenced in [263], [264]. Interestingly, FAS applications in autonomous vehicles and unmanned aerial vehicles (UAVs) show tremendous potential, given that the positions of both the radiating elements and the communication objects themselves can be controlled [67].
+2) FD Communications: Compared to conventional half- duplex communications, FD communications is a promising technology that can potentially double the spectral efﬁciency. This capability has garnered signiﬁcant interest from both the research community and the industry [265]. The combination of FAS and FD communications holds the potential for mutual beneﬁts. Although FD communications is anticipated to boost the network spectral efﬁciency by overlapping the uplink and downlink signals if self-interference can be mitigated, this in- troduces both intra- and inter-cell interference, posing a threat to the performance of large-scale multi-cell networks. The extra dof by FAS can thus be important to address multiuser interference by selecting the port that either maximizes the SINR or experiences minimal interference. For instance, [266] adopted a multi-port ﬂuid antenna technology to propose a co- operative communication strategy to elevate the performance of a multiuser FD NOMA network. Moreover, an analytical framework utilizing stochastic geometry has been derived to evaluate the outage and average sum-rate performance of ﬂuid antenna-assisted FD cellular networks [128].
+3) Green Communications: As global warming and climate change pose serious concerns, researchers are actively explor- ing techniques to make wireless communication systems more sustainable. In this context, FAS has emerged as a valuable technology. On the one hand, FAS can minimize transmission power while meeting user rate requirements [166], [167], [168]. On the other hand, FAS can maximize energy efﬁciency in various scenarios [180], [267], thanks to the diversity gains it offers. Furthermore, a paradigm shift from traditional infor- mation transmission to power transfer has occurred, inﬂuenced by groundbreaking works such as [268] and [269]. Neverthe- less, wireless information transfer and power transfer exhibit distinct behaviors. For instance, interference can be utilized to enhance received power for energy harvesting, as suggested by [270], but high received power does not necessarily translate to maximum information transfer. Conventional approaches typically focus on maximizing either wireless information or power transfer, using techniques like power allocation, beam- forming, and time switching or power splitting. In contrast, FAS introduces a novel approach to address this tradeoff [271], [272]. Speciﬁcally, the SINR and received power over the ports in FAS exhibit different trends. This unique capability of FAS suggests that speciﬁc ports can be dedicated to maximizing the SINR for information reception, while others can be assigned to maximize the harvested energy [85].
+4) ISAC: Cellular networks have undergone a transforma- tion, shifting from their initial purpose of providing commu- nication services to becoming ISAC networks, also referred to as dual-functional radar-communication networks. The ul- timate goal of ISAC is to create perceptive mobile networks where both communication and radar sensing functions are seamlessly combined within a single system that shares the same frequency band and hardware. The sensing operation of ISAC involves extracting essential information about targets and their surroundings. Notably, MIMO schemes have gained widespread recognition for their pivotal role in this conﬁgu- ration because they offer precoding capabilities for achieving spatial beamforming and waveform shaping [273]. Presumably, FAS could provide an additional dimension for enhancing the performance of ISAC [124]. Speciﬁcally, for ISAC transmitter, we can employ FAS to optimize the ports and precoder jointly to establish favorable communication and sensing channels for performing sensing and communications simultaneously. On the other hand, for ISAC receiver, we can employ slow or fast FAMA to leverage the variations in the channel envelope to eliminate interference due to radar sensing [74], [182]. Also, FAS enables a ﬂexible coexisting approach to use the spatial resources for realizing radar sensing and communications simultaneously. In fact, the greatest impedi- ment for the ISAC network is to balance communication and sensing performance of the dual-functional waveform [274]. FAS provides a novel approach to unify the communication and sensing functionality by creating an ISAC channel that can make them reinforce each other. In particular, the spatial steering vectors of the sensing and communication channels can be aligned using FAS. In such cases, the functionalities of communication and sensing can be achieved with a common signal waveform, simplifying the network design signiﬁcantly. Furthermore, since the communication waveform can be uti- lized for sensing directly, removing the need for dedicated signals for sensing, the interference due to the sensing require- ment can be reduced greatly. A crucial challenge in a FAS- assisted ISAC system is however the need to optimize the port and beamforming jointly, which is an NP-hard optimization problem. In [124], a deep reinforcement learning and pointer network was proposed to build an end-to-end learning network for addressing the intractable joint optimization problem.
+5) Near-Field Communications: Traditionally, wireless sys- tems are assumed to operate in the far ﬁeld, where the wave- front can be approximated using planar waves. However, with
 Near-field 
 Spherical wave
 Far-field 
@@ -9841,296 +9277,15 @@ Planar wave
 > Rayleigh distance
 
 Figure 45: Near-ﬁeld and far-ﬁeld communications.
-increasing operating frequencies and antenna array sizes, this
-approximation may no longer hold accurate, necessitating the
-adoption of a near-ﬁeld model. A fundamental premise of near-
-ﬁeld communications is the Rayleigh distance, which deﬁnes
-the boundary between the near-ﬁeld and far-ﬁeld regions. The
-Rayleigh distance is proportional to the product of the square
-of the array aperture and the operating frequency [275], [276].
-As shown in Fig. 45, if the distance between the transmitter
-and the receiver exceeds the Rayleigh distance, the region is
-considered far-ﬁeld, in which the electromagnetic ﬁeld can
-be approximately modeled by planar waves. If the distance is
-less than the Rayleigh distance, then the region is considered
-near-ﬁeld, and the electromagnetic ﬁeld should be modeled
-using spherical waves [277], [278]. Unlike the far-ﬁeld case
-where signal beams can focus energy at a certain angle due
-to different electromagnetic wave propagation models, near-
-ﬁeld signal beams can concentrate energy at a speciﬁc location
-with a given angle and distance [279]. This property can be
-exploited to mitigate inter-user interference and enhance spec-
-trum efﬁciency. Therefore, near-ﬁeld beams provide additional
-resolution in the distance domain, enabling possibilities like
-location division multiple access [280]. Since the near-ﬁeld
-effect becomes more pronounced as the operating frequency
-and antenna array size increase, it is crucial to investigate the
-performance of FAS in the context of near-ﬁeld communica-
-tions, as a large surface area is desired in FAS. In addition,
-exploring how more users can be accommodated using the
-concept of FAMA in a near-ﬁeld environment is intriguing.
-
-6) NGMA: To facilitate massive communications in 6G, the adoption of NGMA is evidently crucial [18], [19]. One avenue of exploration involves examining the interplay between exist-ing multiple access methods such as OMA, NOMA, RSMA, grant-free access and FAMA. A notable advantage in this research direction lies in the availability of CSI at the transmit-ter, enabling effective interference management and enhancing network connectivity and capacity [281]. Speciﬁcally, FAS-NGMA should adeptly support multiple users across allocated resource blocks, encompassing spatial moments, time slots, frequency bands, spreading codes, and power levels. This approach has the potential to further enhance the connectivity, spectral efﬁciency, energy efﬁciency, and latency of wireless communication systems. On an alternative trajectory, one candelve into the exploration of novel multiple access schemes, such as slow or fast FAMA, opportunisitic FAMA, CUMA or other variations of FAMA schemes where CSI and SIC are
-
-42
-not mandated at the transmitter and receiver, respectively. The
-advantage in this research direction lies in the simpliﬁcation of
-the multiple access protocol, as CSI acquisition, beamforming,
-and power allocation are not required at the transmitter, and
-SIC is not necessitated at the receiver. However, under certain
-situations, CSI and SIC are feasible and can bring additional
-performance gains. It is important to look into the synergy
-and see how FAS can beneﬁt from the presence of CSI and
-SIC. Given the emergence of novel multiple access schemes,
-it is also crucial to analyze their performance to obtain deeper
-insights. Consequently, some efforts have been given in this
-matter, see e.g., [75], [181], [282], but consideration of more
-practical assumptions in the analysis needs to be sought.
-7) NTN: In order to realize ubiquitous connectivity, 6G is
-anticipated to extend beyond terrestrial boundaries, incorporat-
-ing technologies such as drones, balloons, satellites, and more
-[283]. Compared to terrestrial devices, non-terrestrial devices
-may experience LoS links, introducing challenges related to
-strong intra-cell and inter-cell interference. To address these
-issues, researchers have actively explored multiple access and
-interference management schemes [284], [285], [286], [287],
-[288], [289]. Interestingly, FAS presents promising solutions
-for NTN. It was shown in [65] that the full array gain in FAS
-can be harnessed over the desired direction while null steering
-can be realized over all undesired directions. Building upon the
-concepts from [290], [291], [292], the position reconﬁguration
-of ﬂuid antennas can also be strategically employed to increase
-the rank-deﬁciency of the LoS channels. To a certain degree,
-ﬂuid antennas can also be utilized with optimal trajectories or
-positioning to jointly conﬁgure the small-scale and large-scale
-fading effects for NTN. Conversely, trajectory optimization,
-which is widely adopted for UAV communications, may also
-be applied in FAS [67]. Moreover, handover issues may be
-addressed via the use of ﬂuid antennas and ML methods.
-8) PLS: Since FAS provides an additional dof and signif-
-icant communication gains over TAS, some researchers have
-investigated the potential of FAS in the context of PLS [293],
-[294], [295], [296], [297]. Speciﬁcally, [293] considered a
-FAS-assisted wiretap channel consisting of a legitimate trans-
-mitter (Alice), a legitimate receiver (Bob), and an eavesdropper
-(Eve). In this setup, Alice transmitted not only the information-
-bearing signal but also a jamming signal to disrupt Eve. The
-secrecy rate of the system was maximized by port selection
-and power control. The study revealed that employing FAS
-yielded secrecy performance comparable to the scenario where
-Bob utilized multiple traditional antennas and MRC. Never-
-theless, in [293], Alice adopted Gaussian noise for jamming,
-causing interference not only to Eve but also to Bob as well.
-To further improve this, [294] revisited the same system in
-which Alice adopted a different jamming mode to transmit
-encoded codewords instead of Gaussian noise. This allowed
-Bob to successfully decode the jamming signal and cancel
-the interference, while Eve could not. With such an approach,
-the secrecy performance of the system was greatly enhanced.
-Different from [293] and [294], where the ﬂuid antenna was
-deployed at Bob, [295] and [296] investigated scenarios with
-multiple ﬂuid antennas at the transmitter, i.e., Alice. In [295],
-a single Eve was considered while [296] examined scenarios
-with multiple Eves. Algorithms were proposed to optimize the
-beamforming vector and the positions of the ﬂuid antennas,
-demonstrating that FAS can signiﬁcantly enhance the secrecy
-performance. Furthermore, [297] provided a thorough secrecy
-analysis for FAS in spatially correlated Nakagami-m fading
-channels. FAS has also recently been considered to maximize
-the average monitoring rate in proactive monitoring systems
-that oversee suspicious communication [298].
-Despite the work above, there are still many open questions
-that remain unanswered. For example, if both Alice and Bob
-are equipped with multiple ﬂuid antennas, how should the
-system be designed to approach or achieve the optimal secrecy
-performance? Can Alice’s or Bob’s ﬂuid antennas still improve
-the system secrecy if Eve also uses ﬂuid antennas to enhance
-its wiretapping capability? These questions point to the need
-for further investigation into the intricate interactions and
-dynamics in scenarios where all parties employ FAS. Future
-research efforts could delve into the design and optimization
-strategies for secure communication systems involving multi-
-ple FAS-equipped entities, addressing potential challenges and
-uncovering new insights in the realm of PLS.
-9) RIS: With the shortening of communication distance due
-to the use of higher operating frequencies in 5G and beyond
-systems, RIS has emerged as an important ﬁx to repair broken
-links between the BS and UEs, reducing the need for network
-densiﬁcation which is extremely costly. However, the doubly
-fading of the cascaded channels in RIS means that the received
-signal power is usually weak compared to noise, despite the
-beam-focusing of RIS. FAS here can thus provide the diversity
-desperately needed at the UE to mitigate the noise effects. In
-[299], it was shown that FAS can signiﬁcantly improve the
-outage probability and delay outage rate for the RIS setup. In
-addition, recently, the joint optimization of the BS precoding,
-the RIS phase shifting matrix and the FAS positions in the
-multiuser setup was investigated in [300]. The results showed
-that the required transmit power of the BS could be reduced
-substantially while meeting the users’ SINR constraints.
-While RIS and FAS clearly can serve as additional dof and
-beneﬁt from each other, they can also synergize each other
-from a different perspective. In particular, slow FAMA works
-by ﬁnding a favorable position in FAS for each UE such that
-the aggregate interference power is minimal. This is likely only
-if the channels have sufﬁcient ﬂuctuation in space to exploit,
-such as in rich scattering scenarios. Otherwise, the interference
-mitigation capability of slow FAMA degrades signiﬁcantly, as
-would be in the mmWave band [301]. In this case, it is possible
-to utilize RIS as artiﬁcial scatterers that recreate rich scattering
-conditions for FAMA to function well [33], [83]. This idea is
-easy to realize as it involves no optimization of the RIS and
-the beam-focusing is performed by nature as the multiple paths
-combine at the FAS of each UE. This technique was explored
-in [86] where it was demonstrated that artiﬁcial scatterers via
-random RISs effectively restored the performance of FAMA.
-Apparently, it is still not well understood how to bring the
-best of both when they combine. Future work is needed to ex-
-plore proper situations and applications where the performance
-of RIS-FAS justiﬁes the increased complexity. Evidently, it is
-also of great interest to study its performance limits.
-
-43
-10) THz Communications: While mmWave communica-
-tions (30 −100 GHz) is anticipated to unlock the capacity
-in 5G, achieving data rates in the terabits-per-second (Tbps)
-range remains an impossible feat. Accordingly, THz communi-
-cations (0.1−10 THz) have emerged as a highly promising so-
-lution for future 6G networks to address spectrum scarcity and
-capacity limitations [302], [303]. In contrast to mmWave- and
-centimeter-wave communications, THz communications offers
-advantages such as broad bandwidth, narrow beamwidth, and
-high directivity. However, THz communications also comes
-with the drawbacks of high propagation loss, susceptibility to
-LoS blockage, and rank-deﬁcient channel. Recognizing that
-FAS provides an additional dof by dynamically reconﬁguring
-radiating elements, integrating these two technologies becomes
-crucial. For example, in [238], the outage performance of a
-point-to-point THz communication exploiting FAS over cor-
-related α-µ fading channels was studied. The results showed
-that FAS can address key challenges such as high path loss,
-blockages, and molecular absorption effects in the THz band.
-11) XL- and CAP-MIMO: Another emerging technology
-that has attracted signiﬁcant interest is XL-MIMO or CAP-
-MIMO. As discussed earlier, the antenna aperture of XL-
-MIMO can be discrete or continuous. As a matter of fact, there
-is similarity between XL-MIMO and pixel-based antenna.14
-This suggests that key enabling hardware designs in XL-
-MIMO may be applicable to FAS, and vice versa. However,
-FAS typically operates with a fewer number of RF chains and
-can be seen as XL-MIMO with antenna selection, the size
-of which may not be restricted. The latter design is referred
-to as CAP-MIMO [304], also known as holographic MIMO
-[305] or large intelligent surface [306]. Unlike FAS, the entire
-aperture in CAP-MIMO is fully used for communications.
-Recent works in this area have explored pattern optimization
-[307], channel estimation [308], antenna design [50] and an
-approximation via discrete antennas [309]. Although CAP-
-MIMO has shown promising gains, much of the theory is
-still not fully understood. In terms of implementation, the
-holographic concept offers a promising approach to optimize
-precoding. However, the technology bottleneck arises from
-the necessity to fully manipulate the current distribution of
-a continuous aperture. Therefore, FAS can be interpreted as
-a simpliﬁed CAP-MIMO architecture. Speciﬁcally, FAS can
-activate several regions of ports instead of requiring control
-over the current distribution across an entire radiating surface.
-The number of regions depends on the number of RF chains of
-the transceiver. The advantage of such architecture is that there
-is no need to fully manipulate the current distribution over
-any position of a continuous aperture antenna. Furthermore, in
-this architecture, the impact of transmit power and noise can
-be better understood [309]. Also, this architecture opens the
-new possibility of implementing a simple and scalable multiple
-access scheme, as demonstrated in [77], [301].
-12) Integrated Computing and Communication: Cutting-
-edge information processing technologies like AI and ML have
-the potential to deliver ubiquitous computing and intelligent
-14Evidently, it is worth pointing out that a key difference in pixel-based
-antenna systems is that optimization in electromagnetic properties and signal
-processing is jointly done, which is not possible in XL-MIMO.
-services, facilitating the efﬁcient analysis and processing of
-massive data from wireless devices. However, leveraging these
-approaches encounters signiﬁcant challenges due to constraints
-such as limited radio resources, the need for ultra-low latency,
-ultra-high reliability, and high capacity in the next generation
-of wireless communications, i.e, 6G technology [310]. Hence,
-the traditional communication-before-computing technique is
-not able to handle such massive data computation from smart
-wireless devices, e.g., IoT, wearable, and sensor devices, due
-to excessively high latency and low spectrum efﬁciency.
-One intelligent solution to tackle this is to integrate comput-
-ing into communication, referred to as over-the-air computa-
-tion (AirComp) [311], [312], [313]. Contrary to conventional
-wireless communication via multiple access channels, which
-needs data transmission and decoding, AirComp utilizes the
-signal-superposition feature of wireless multiple access chan-
-nels to compute a class of nomographic functions [314] of dis-
-tributed data from smart devices via concurrent transmission.
-Hence, communication-while-computing is possible [315].
-Incorporating FAS into AirComp has potential to provide
-a pioneering fusion of dynamic adaptability and distributed
-intelligence [263], [264], [316]. This synergy can be achieved
-by exploiting the “ﬂuidic” electromagnetic wave properties
-of FAS, while AirComp harnesses distributed computational
-resources for real-time data processing and optimization. More
-precisely, FAS, when integrated with AirComp, can not only
-transmit and receive data but also actively engage in compu-
-tational tasks. In this regard, ﬂuid antennas that are equipped
-with computational capabilities will become active nodes in
-the network that are able to perform signal processing, data
-fusion, and optimization tasks in real-time. Crucially, channel
-strength variation over the FAS ports at the transmitter side can
-provide high-resolution computation in the analogue domain
-without the need of power control. Such distributed intelli-
-gence improves the energy and spectral efﬁciency of wireless
-communications for mobile edge computing, i.e., reducing
-latency and maximizing bandwidth utilization.
-Nonetheless, coordinating the dynamic adjustments of FAS
-alongside the computational tasks performed by AirComp can
-be intricate, and ensuring that the computational resources by
-AirComp are synchronized with the changing conﬁgurations
-of FAS requires sophisticated algorithms and communication
-protocols. In addition, constraints on computational resources,
-e.g., CPU, memory, available within AirComp can complicate
-the optimization of FAS. Besides, given dynamic environmen-
-tal conditions, both FAS and AirComp will need to quickly
-make real-time adaptations to maintain desirable performance,
-which is not straightforward. Most importantly, optimizing the
-allocation of computational resources based on the dynamic
-characteristics of the FAS requires formulating the problem as
-a multi-objective optimization problem, which is an NP-hard
-combinatorial optimization problem with intricate coupling
-amongst optimization variables. Hence, designing mathemati-
-cal models and optimization algorithms that can dynamically
-allocate computational resources within AirComp to maximize
-the performance of such an integrated system while adapting
-to the changing characteristics of the FAS is critical.
-
-44
-13) Others: There are evidently more areas deserving dis-
-cussion that can beneﬁt from the application of FAS but are
-not covered in this article. For instance, it is speculated that
-coding that imposes time correlation of data could help a FAS-
-equipped UE ﬁgure out the best port on a per-symbol basis, for
-realizing fast FAMA. Furthermore, the results in Section V-E
-revealed that FAS could greatly simplify precoding in the case
-of LoS-dominant channels. Therefore, Li-Fi (light ﬁdelity) and
-cell-free MIMO may be ideal scenarios for applying FAS. In
-addition, FAMA has a unique capability of dealing with co-
-channel interference without precoding and should ﬁnd appli-
-cations in cognitive radio networks. On the other hand, CUMA
-may be regarded as performing hybrid beamforming without
-phase shifters in the analogue domain. Thus it is reasonable to
-expect that certain hybrid signal processing techniques may be
-useful to enhance the CUMA architecture. Last but not least,
-while semantic communication is gathering much attention in
-recent years, the operating conditions that do need semantic
-communication are usually hostile and narrowband, e.g., not
-permitting heavy channel coding and interference-rich. In this
-case, FAS can be an essential tool to provide some immunity.
-In summary, there are many uncharted territories that involve
-FAS but are not mentioned in this article.
+increasing operating frequencies and antenna array sizes, this approximation may no longer hold accurate, necessitating the adoption of a near-ﬁeld model. A fundamental premise of near- ﬁeld communications is the Rayleigh distance, which deﬁnes the boundary between the near-ﬁeld and far-ﬁeld regions. The Rayleigh distance is proportional to the product of the square of the array aperture and the operating frequency [275], [276]. As shown in Fig. 45, if the distance between the transmitter and the receiver exceeds the Rayleigh distance, the region is considered far-ﬁeld, in which the electromagnetic ﬁeld can be approximately modeled by planar waves. If the distance is less than the Rayleigh distance, then the region is considered near-ﬁeld, and the electromagnetic ﬁeld should be modeled using spherical waves [277], [278]. Unlike the far-ﬁeld case where signal beams can focus energy at a certain angle due to different electromagnetic wave propagation models, near- ﬁeld signal beams can concentrate energy at a speciﬁc location with a given angle and distance [279]. This property can be exploited to mitigate inter-user interference and enhance spec- trum efﬁciency. Therefore, near-ﬁeld beams provide additional resolution in the distance domain, enabling possibilities like location division multiple access [280]. Since the near-ﬁeld effect becomes more pronounced as the operating frequency and antenna array size increase, it is crucial to investigate the performance of FAS in the context of near-ﬁeld communica- tions, as a large surface area is desired in FAS. In addition, exploring how more users can be accommodated using the concept of FAMA in a near-ﬁeld environment is intriguing. 
+6) NGMA: To facilitate massive communications in 6G, the adoption of NGMA is evidently crucial [18], [19]. One avenue of exploration involves examining the interplay between exist-ing multiple access methods such as OMA, NOMA, RSMA, grant-free access and FAMA. A notable advantage in this research direction lies in the availability of CSI at the transmit-ter, enabling effective interference management and enhancing network connectivity and capacity [281]. Speciﬁcally, FAS-NGMA should adeptly support multiple users across allocated resource blocks, encompassing spatial moments, time slots, frequency bands, spreading codes, and power levels. This approach has the potential to further enhance the connectivity, spectral efﬁciency, energy efﬁciency, and latency of wireless communication systems. On an alternative trajectory, one candelve into the exploration of novel multiple access schemes, such as slow or fast FAMA, opportunisitic FAMA, CUMA or other variations of FAMA schemes where CSI and SIC are not mandated at the transmitter and receiver, respectively. The advantage in this research direction lies in the simpliﬁcation of the multiple access protocol, as CSI acquisition, beamforming, and power allocation are not required at the transmitter, and SIC is not necessitated at the receiver. However, under certain situations, CSI and SIC are feasible and can bring additional performance gains. It is important to look into the synergy and see how FAS can beneﬁt from the presence of CSI and SIC. Given the emergence of novel multiple access schemes, it is also crucial to analyze their performance to obtain deeper insights. Consequently, some efforts have been given in this matter, see e.g., [75], [181], [282], but consideration of more practical assumptions in the analysis needs to be sought.
+7) NTN: In order to realize ubiquitous connectivity, 6G is anticipated to extend beyond terrestrial boundaries, incorporat- ing technologies such as drones, balloons, satellites, and more [283]. Compared to terrestrial devices, non-terrestrial devices may experience LoS links, introducing challenges related to strong intra-cell and inter-cell interference. To address these issues, researchers have actively explored multiple access and interference management schemes [284], [285], [286], [287], [288], [289]. Interestingly, FAS presents promising solutions for NTN. It was shown in [65] that the full array gain in FAS can be harnessed over the desired direction while null steering can be realized over all undesired directions. Building upon the concepts from [290], [291], [292], the position reconﬁguration of ﬂuid antennas can also be strategically employed to increase the rank-deﬁciency of the LoS channels. To a certain degree, ﬂuid antennas can also be utilized with optimal trajectories or positioning to jointly conﬁgure the small-scale and large-scale fading effects for NTN. Conversely, trajectory optimization, which is widely adopted for UAV communications, may also be applied in FAS [67]. Moreover, handover issues may be addressed via the use of ﬂuid antennas and ML methods.
+8) PLS: Since FAS provides an additional dof and signif- icant communication gains over TAS, some researchers have investigated the potential of FAS in the context of PLS [293], [294], [295], [296], [297]. Speciﬁcally, [293] considered a FAS-assisted wiretap channel consisting of a legitimate trans- mitter (Alice), a legitimate receiver (Bob), and an eavesdropper (Eve). In this setup, Alice transmitted not only the information- bearing signal but also a jamming signal to disrupt Eve. The secrecy rate of the system was maximized by port selection and power control. The study revealed that employing FAS yielded secrecy performance comparable to the scenario where Bob utilized multiple traditional antennas and MRC. Never- theless, in [293], Alice adopted Gaussian noise for jamming, causing interference not only to Eve but also to Bob as well. To further improve this, [294] revisited the same system in which Alice adopted a different jamming mode to transmit encoded codewords instead of Gaussian noise. This allowed Bob to successfully decode the jamming signal and cancel the interference, while Eve could not. With such an approach, the secrecy performance of the system was greatly enhanced. Different from [293] and [294], where the ﬂuid antenna was deployed at Bob, [295] and [296] investigated scenarios with multiple ﬂuid antennas at the transmitter, i.e., Alice. In [295], a single Eve was considered while [296] examined scenarios with multiple Eves. Algorithms were proposed to optimize the beamforming vector and the positions of the ﬂuid antennas, demonstrating that FAS can signiﬁcantly enhance the secrecy performance. Furthermore, [297] provided a thorough secrecy analysis for FAS in spatially correlated Nakagami-m fading channels. FAS has also recently been considered to maximize the average monitoring rate in proactive monitoring systems that oversee suspicious communication [298]. Despite the work above, there are still many open questions that remain unanswered. For example, if both Alice and Bob are equipped with multiple ﬂuid antennas, how should the system be designed to approach or achieve the optimal secrecy performance? Can Alice’s or Bob’s ﬂuid antennas still improve the system secrecy if Eve also uses ﬂuid antennas to enhance its wiretapping capability? These questions point to the need for further investigation into the intricate interactions and dynamics in scenarios where all parties employ FAS. Future research efforts could delve into the design and optimization strategies for secure communication systems involving multi- ple FAS-equipped entities, addressing potential challenges and uncovering new insights in the realm of PLS.
+9) RIS: With the shortening of communication distance due to the use of higher operating frequencies in 5G and beyond systems, RIS has emerged as an important ﬁx to repair broken links between the BS and UEs, reducing the need for network densiﬁcation which is extremely costly. However, the doubly fading of the cascaded channels in RIS means that the received signal power is usually weak compared to noise, despite the beam-focusing of RIS. FAS here can thus provide the diversity desperately needed at the UE to mitigate the noise effects. In [299], it was shown that FAS can signiﬁcantly improve the outage probability and delay outage rate for the RIS setup. In addition, recently, the joint optimization of the BS precoding, the RIS phase shifting matrix and the FAS positions in the multiuser setup was investigated in [300]. The results showed that the required transmit power of the BS could be reduced substantially while meeting the users’ SINR constraints. While RIS and FAS clearly can serve as additional dof and beneﬁt from each other, they can also synergize each other from a different perspective. In particular, slow FAMA works by ﬁnding a favorable position in FAS for each UE such that the aggregate interference power is minimal. This is likely only if the channels have sufﬁcient ﬂuctuation in space to exploit, such as in rich scattering scenarios. Otherwise, the interference mitigation capability of slow FAMA degrades signiﬁcantly, as would be in the mmWave band [301]. In this case, it is possible to utilize RIS as artiﬁcial scatterers that recreate rich scattering conditions for FAMA to function well [33], [83]. This idea is easy to realize as it involves no optimization of the RIS and the beam-focusing is performed by nature as the multiple paths combine at the FAS of each UE. This technique was explored in [86] where it was demonstrated that artiﬁcial scatterers via random RISs effectively restored the performance of FAMA. Apparently, it is still not well understood how to bring the best of both when they combine. Future work is needed to ex- plore proper situations and applications where the performance of RIS-FAS justiﬁes the increased complexity. Evidently, it is also of great interest to study its performance limits. 
+10) THz Communications: While mmWave communica- tions (30 −100 GHz) is anticipated to unlock the capacity in 5G, achieving data rates in the terabits-per-second (Tbps) range remains an impossible feat. Accordingly, THz communi- cations (0.1−10 THz) have emerged as a highly promising so- lution for future 6G networks to address spectrum scarcity and capacity limitations [302], [303]. In contrast to mmWave- and centimeter-wave communications, THz communications offers advantages such as broad bandwidth, narrow beamwidth, and high directivity. However, THz communications also comes with the drawbacks of high propagation loss, susceptibility to LoS blockage, and rank-deﬁcient channel. Recognizing that FAS provides an additional dof by dynamically reconﬁguring radiating elements, integrating these two technologies becomes crucial. For example, in [238], the outage performance of a point-to-point THz communication exploiting FAS over cor- related α-µ fading channels was studied. The results showed that FAS can address key challenges such as high path loss, blockages, and molecular absorption effects in the THz band.
+11) XL- and CAP-MIMO: Another emerging technology that has attracted signiﬁcant interest is XL-MIMO or CAP- MIMO. As discussed earlier, the antenna aperture of XL- MIMO can be discrete or continuous. As a matter of fact, there is similarity between XL-MIMO and pixel-based antenna.14 This suggests that key enabling hardware designs in XL- MIMO may be applicable to FAS, and vice versa. However, FAS typically operates with a fewer number of RF chains and can be seen as XL-MIMO with antenna selection, the size of which may not be restricted. The latter design is referred to as CAP-MIMO [304], also known as holographic MIMO [305] or large intelligent surface [306]. Unlike FAS, the entire aperture in CAP-MIMO is fully used for communications. Recent works in this area have explored pattern optimization [307], channel estimation [308], antenna design [50] and an approximation via discrete antennas [309]. Although CAP- MIMO has shown promising gains, much of the theory is still not fully understood. In terms of implementation, the holographic concept offers a promising approach to optimize precoding. However, the technology bottleneck arises from the necessity to fully manipulate the current distribution of a continuous aperture. Therefore, FAS can be interpreted as a simpliﬁed CAP-MIMO architecture. Speciﬁcally, FAS can activate several regions of ports instead of requiring control over the current distribution across an entire radiating surface. The number of regions depends on the number of RF chains of the transceiver. The advantage of such architecture is that there is no need to fully manipulate the current distribution over any position of a continuous aperture antenna. Furthermore, in this architecture, the impact of transmit power and noise can be better understood [309]. Also, this architecture opens the new possibility of implementing a simple and scalable multiple access scheme, as demonstrated in [77], [301].
+12) Integrated Computing and Communication: Cutting- edge information processing technologies like AI and ML have the potential to deliver ubiquitous computing and intelligent 14Evidently, it is worth pointing out that a key difference in pixel-based antenna systems is that optimization in electromagnetic properties and signal processing is jointly done, which is not possible in XL-MIMO. services, facilitating the efﬁcient analysis and processing of massive data from wireless devices. However, leveraging these approaches encounters signiﬁcant challenges due to constraints such as limited radio resources, the need for ultra-low latency, ultra-high reliability, and high capacity in the next generation of wireless communications, i.e, 6G technology [310]. Hence, the traditional communication-before-computing technique is not able to handle such massive data computation from smart wireless devices, e.g., IoT, wearable, and sensor devices, due to excessively high latency and low spectrum efﬁciency. One intelligent solution to tackle this is to integrate comput- ing into communication, referred to as over-the-air computa- tion (AirComp) [311], [312], [313]. Contrary to conventional wireless communication via multiple access channels, which needs data transmission and decoding, AirComp utilizes the signal-superposition feature of wireless multiple access chan- nels to compute a class of nomographic functions [314] of dis- tributed data from smart devices via concurrent transmission. Hence, communication-while-computing is possible [315]. Incorporating FAS into AirComp has potential to provide a pioneering fusion of dynamic adaptability and distributed intelligence [263], [264], [316]. This synergy can be achieved by exploiting the “ﬂuidic” electromagnetic wave properties of FAS, while AirComp harnesses distributed computational resources for real-time data processing and optimization. More precisely, FAS, when integrated with AirComp, can not only transmit and receive data but also actively engage in compu- tational tasks. In this regard, ﬂuid antennas that are equipped with computational capabilities will become active nodes in the network that are able to perform signal processing, data fusion, and optimization tasks in real-time. Crucially, channel strength variation over the FAS ports at the transmitter side can provide high-resolution computation in the analogue domain without the need of power control. Such distributed intelli- gence improves the energy and spectral efﬁciency of wireless communications for mobile edge computing, i.e., reducing latency and maximizing bandwidth utilization. Nonetheless, coordinating the dynamic adjustments of FAS alongside the computational tasks performed by AirComp can be intricate, and ensuring that the computational resources by AirComp are synchronized with the changing conﬁgurations of FAS requires sophisticated algorithms and communication protocols. In addition, constraints on computational resources, e.g., CPU, memory, available within AirComp can complicate the optimization of FAS. Besides, given dynamic environmen- tal conditions, both FAS and AirComp will need to quickly make real-time adaptations to maintain desirable performance, which is not straightforward. Most importantly, optimizing the allocation of computational resources based on the dynamic characteristics of the FAS requires formulating the problem as a multi-objective optimization problem, which is an NP-hard combinatorial optimization problem with intricate coupling amongst optimization variables. Hence, designing mathemati- cal models and optimization algorithms that can dynamically allocate computational resources within AirComp to maximize the performance of such an integrated system while adapting to the changing characteristics of the FAS is critical. 
+13) Others: There are evidently more areas deserving dis- cussion that can beneﬁt from the application of FAS but are not covered in this article. For instance, it is speculated that coding that imposes time correlation of data could help a FAS- equipped UE ﬁgure out the best port on a per-symbol basis, for realizing fast FAMA. Furthermore, the results in Section V-E revealed that FAS could greatly simplify precoding in the case of LoS-dominant channels. Therefore, Li-Fi (light ﬁdelity) and cell-free MIMO may be ideal scenarios for applying FAS. In addition, FAMA has a unique capability of dealing with co- channel interference without precoding and should ﬁnd appli- cations in cognitive radio networks. On the other hand, CUMA may be regarded as performing hybrid beamforming without phase shifters in the analogue domain. Thus it is reasonable to expect that certain hybrid signal processing techniques may be useful to enhance the CUMA architecture. Last but not least, while semantic communication is gathering much attention in recent years, the operating conditions that do need semantic communication are usually hostile and narrowband, e.g., not permitting heavy channel coding and interference-rich. In this case, FAS can be an essential tool to provide some immunity. In summary, there are many uncharted territories that involve FAS but are not mentioned in this article.
 
 
 
