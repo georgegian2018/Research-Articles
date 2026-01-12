@@ -13102,8 +13102,10 @@ Near-field
 Spherical wave
 Far-field 
 Planar wave
+
 ≤ Rayleigh distance
 > Rayleigh distance
+
 Figure 45: Near-ﬁeld and far-ﬁeld communications.
 increasing operating frequencies and antenna array sizes, this
 approximation may no longer hold accurate, necessitating the
@@ -13133,23 +13135,8 @@ performance of FAS in the context of near-ﬁeld communica-
 tions, as a large surface area is desired in FAS. In addition,
 exploring how more users can be accommodated using the
 concept of FAMA in a near-ﬁeld environment is intriguing.
-6) NGMA: To facilitate massive communications in 6G, the
-adoption of NGMA is evidently crucial [18], [19]. One avenue
-of exploration involves examining the interplay between exist-
-ing multiple access methods such as OMA, NOMA, RSMA,
-grant-free access and FAMA. A notable advantage in this
-research direction lies in the availability of CSI at the transmit-
-ter, enabling effective interference management and enhancing
-network connectivity and capacity [281]. Speciﬁcally, FAS-
-NGMA should adeptly support multiple users across allocated
-resource blocks, encompassing spatial moments, time slots,
-frequency bands, spreading codes, and power levels. This
-approach has the potential to further enhance the connectivity,
-spectral efﬁciency, energy efﬁciency, and latency of wireless
-communication systems. On an alternative trajectory, one can
-delve into the exploration of novel multiple access schemes,
-such as slow or fast FAMA, opportunisitic FAMA, CUMA or
-other variations of FAMA schemes where CSI and SIC are
+
+6) NGMA: To facilitate massive communications in 6G, the adoption of NGMA is evidently crucial [18], [19]. One avenue of exploration involves examining the interplay between exist-ing multiple access methods such as OMA, NOMA, RSMA, grant-free access and FAMA. A notable advantage in this research direction lies in the availability of CSI at the transmit-ter, enabling effective interference management and enhancing network connectivity and capacity [281]. Speciﬁcally, FAS-NGMA should adeptly support multiple users across allocated resource blocks, encompassing spatial moments, time slots, frequency bands, spreading codes, and power levels. This approach has the potential to further enhance the connectivity, spectral efﬁciency, energy efﬁciency, and latency of wireless communication systems. On an alternative trajectory, one candelve into the exploration of novel multiple access schemes, such as slow or fast FAMA, opportunisitic FAMA, CUMA or other variations of FAMA schemes where CSI and SIC are
 
 42
 not mandated at the transmitter and receiver, respectively. The
