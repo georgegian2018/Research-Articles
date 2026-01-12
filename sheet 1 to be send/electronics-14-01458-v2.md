@@ -2504,28 +2504,9 @@ def generate_fas_channel(N, W, SNR_dB=10):
 2
 Figure 1: Usage scenarios of IMT-2030 [5].
 • Integrated sensing and communication (ISAC).
-Immersive communication advances and broadens the capa-
-bility of enhanced mobile broadband (eMBB) of International
-Mobile Telecommunications (IMT)-2020, to deal with the use
-cases that provide rich and interactive mobile services, includ-
-ing interactions with machine interfaces, communication for
-immersive extended reality, remote multi-sensory telepresence,
-and holographic communication as well as supporting a range
-of environments, such as hotspots, urban and rural [6]. HRLLC
-builds upon the ultra reliable and low-latency communication
-(URLLC) of IMT-2020, catering to specialized use cases with
-stringent requirements on reliability and latency [7], [8]. Well-
-known examples include the time-synchronized operations for
-emergency services, telemedicine, and monitoring in electrical
-power transmission and distribution. On the other hand, mas-
-sive communication extends the concept of massive machine-
-type communication (mMTC) from IMT-2020, involving the
-connection of a huge number of long-lasting devices or sensors
-for various Internet-of-Things (IoT) applications [9], [10].
-While the aforesaid usage scenarios are progressive contin-
-uation of the 5G use cases, 6G is boosted by three new usage
-scenarios. The ﬁrst usage is AI and communication, addressing
-distributed computing and AI appl
+Immersive communication advances and broadens the capa-bility of enhanced mobile broadband (eMBB) of International Mobile Telecommunications (IMT)-2020, to deal with the use cases that provide rich and interactive mobile services, includ-ing interactions with machine interfaces, communication for immersive extended reality, remote multi-sensory telepresence, and holographic communication as well as supporting a range of environments, such as hotspots, urban and rural [6]. HRLLC builds upon the ultra reliable and low-latency communication (URLLC) of IMT-2020, catering to specialized use cases with stringent requirements on reliability and latency [7], [8]. Well-known examples include the time-synchronized operations for emergency services, telemedicine, and monitoring in electrical power transmission and distribution. On the other hand, mas-
+sive communication extends the concept of massive machine-type communication (mMTC) from IMT-2020, involving the connection of a huge number of long-lasting devices or sensors for various Internet-of-Things (IoT) applications [9], [10].
+While the aforesaid usage scenarios are progressive contin-uation of the 5G use cases, 6G is boosted by three new usage scenarios. The ﬁrst usage is AI and communication, addressing distributed computing and AI appl
 ```
 
 ### Figure 2: Organization of the tutorial. (Page 6)
@@ -2541,24 +2522,12 @@ Figure 2: Organization of the tutorial.
 
 ![Fig. 3: The normalized channel vector between the transmitter](/mnt/data/Wong_COMST_00354_2024_assets/Figure3_p7.png)
 
-```text
-sly high. In this model,
-a point-to-point channel is considered where the transmitter
-deploys a traditional ﬁxed-position antenna and the receiver
-uses a linear ﬂuid antenna with a single radiating element
-(also known as active port). The ﬂuid antenna has N preset
-locations (also known as ports) that are evenly distributed over
-a length of Wλ, where λ is the wavelength, as depicted in
-Fig. 3. The normalized channel vector between the transmitter
+
+sly high. In this model, a point-to-point channel is considered where the transmitter deploys a traditional ﬁxed-position antenna and the receiver uses a linear ﬂuid antenna with a single radiating element (also known as active port). The ﬂuid antenna has N preset locations (also known as ports) that are evenly distributed over a length of Wλ, where λ is the wavelength, as depicted in Fig. 3. The normalized channel vector between the transmitter
 Figure 3: A schematic of a 1D ﬂuid antenna structure.
-and the N ports of the FAS receiver can be denoted as
-h = [h1, . . . , hN]T , where hn ∼CN(0, 1) is the channel gain
-from the transmitter to the n-th port, with a standard complex
-Gaussian distribution. As the ports may be closely located,
-some entries of h are strongly correlated. Thus, the channel
-coefﬁcients can be parameterized as in [87], where the ﬁrst
-port is treated as a reference port. More concretely, the n-th
-entry of h can be computed as
+and the N ports of the FAS receiver can be denoted as h = [h1, . . . , hN]T , where hn ∼CN(0, 1) is the channel gain from the transmitter to the n-th port, with a standard complex Gaussian distribution. As the ports may be closely located, some entries of h are strongly correlated. Thus, the channel coefﬁcients can be parameterized as in [87], where the ﬁrst port is treated as a reference port. More concretely, the n-th entry of h can be computed as
+
+```text
 hn =
 p
 1 −µ2nxn + µnx1
@@ -2569,10 +2538,8 @@ p
 
 , for n = 2, . . . , N,
 (1)
-where x1, . . . , xN, y1, . . . , yN are independent and identically
-distributed (i.i.d.) real Gaussian variables with zero-mean and
-variance of 1
-2, while µn in (1) is chosen as
+where x1, . . . , xN, y1, . . . , yN are independent and identically distributed (i.i.d.) real Gaussian variables with zero-mean and variance of 1
+2, while µn in (1) is chosen as 
 µn = J0
 
 2π |n −1|
@@ -2588,8 +2555,7 @@ where J0 (·) is the zero-order Bessel function of the ﬁrst kind.
 ![Figure 4: Average variance of hn, ∀n ∈{1, . . . , N} versus the](/mnt/data/Wong_COMST_00354_2024_assets/Figure4_p8.png)
 
 ```text
-ance matrix of the channels by J,
-the (n, m)-th element of J can be expressed as
+ance matrix of the channels by J, the (n, m)-th element of J can be expressed as
 Jn,m = Cov [hn, hm] = J0
 
 2π |n −m|
@@ -2597,9 +2563,7 @@ N −1 W
 
 .
 (5)
-Each entry of h can be further modeled as a linear combination
-of N i.i.d. circularly symmetric complex Gaussian (CSCG)
-random variables by utilizing the covariance matrix J [89].
+Each entry of h can be further modeled as a linear combination of N i.i.d. circularly symmetric complex Gaussian (CSCG) random variables by utilizing the covariance matrix J [89].
 Speciﬁcally, we can denote the eigenvalue decomposition of
 2
 4
@@ -2619,17 +2583,15 @@ Speciﬁcally, we can denote the eigenvalue decomposition of
 0.9
 1
 W = 0.5, 1, 2, 3, 4, 5
-Figure 4: Average variance of hn, ∀n ∈{1, . . . , N} versus the
-approximation level ˆN with N = 100.
-J as QΛQH, where Q is the eigenvector matrix of J and
+Figure 4: Average variance of hn, ∀n ∈{1, . . . , N} versus the approximation level ˆN with N = 100.
+J as QΛQH, where Q is the eigenvector matrix of J and 
 Λ = diag{λ1, . . . , λN} is the diagonal eigenvalue matrix of
 J such that λ1 ≥· · · ≥λN. As such, we can write
 h = QΛ
 1
 2 g,
 (6)
-where g = [g1, . . . , gN]T and gn ∼CN(0, 1), ∀n. Alterna-
-tively, the n-th element of h can be rewritten as
+where g = [g1, . . . , gN]T and gn ∼CN(0, 1), ∀n. Alterna-tively, the n-th element of h can be rewritten as
 hn =
 N
 X
@@ -2643,20 +2605,11 @@ m=1
 qn,m
 p
 λm (xm + jym) , (7)
-where qn,m is the (n, m)-th element of Q. Obviously, with (6)
-or (7), h follows the Jakes’ assumption, i.e., h ∼CN(0, J).
-This model yields a more accurate performance estimation;
-however, it is very difﬁcult to analyze the performance of FAS
-using (6) or (7) since the probability density function (PDF)
-and cumulative distribution function (CDF) usually result in
-expressions that involve N nested integrals, which are non-
-computable and thus mathematically intractable [92].
-Fortunately, [89], [92] have shown that the covariance ma-
-trix J of the channel vector h mainly focuses on a few largest
-eigenvalues if N is sufﬁciently large or W is small enough.2
-This makes it possible to approximate each channel coefﬁcient
-of hn by taking only ˆN ≪N eigenvalues into account. More
-concretely, the entry hn in (7) can be approximated by
+where qn,m is the (n, m)-th element of Q. Obviously, with (6) or (7), h follows the Jakes’ assumption, i.e., h ∼CN(0, J). 
+This model yields a more accurate performance estimation; however, it is very difﬁcult to analyze the performance of FAS using (6) or (7) since the probability density function (PDF) and cumulative distribution function (CDF) usually result in expressions that involve N nested integrals, which are non-computable and thus mathematically intractable [92].
+Fortunately, [89], [92] have shown that the covariance ma-trix J of the channel vector h mainly focuses on a few largest eigenvalues if N is sufﬁciently large or W is small enough.
+2
+This makes it possible to approximate each channel coefﬁcient of hn by taking only ˆN ≪N eigenvalues into account. More concretely, the entry hn in (7) can be approximated by 
 ˆhn =
 ˆ
 N
@@ -2678,30 +2631,12 @@ n,mλm).
 
 ```text
 9
-Figure 5: An example of a 2D FAS receiver, illustrating the
-mapping between the 2D indices and 1D index.
-and ˆN < N, the value of (9) will gradually approach 1. Fig. 4
-shows that this is true and can be realized by a small ˆN (in
-contrast to N). For example, when W = 0.5 and W = 2, the
-value of (9) is close to 1 with ˆN, respectively, being 3 and
-6. The exact channel model hn in (7) can thus be accurately
-approximated by taking into account only a few eigenvalues
-of J. Using these properties, it is possible to approximate the
-PDF and CDF of h in closed-form expressions, and analyze
-the outage probability of single-user FAS channels [89], [93],
-and that for a two-user FAMA system [92]. Recall that in a
-point-to-point TAS scenario, where the transmitter and receiver
-use a traditional ﬁxed-position antenna, the complex channel
-is modeled as in (4), which has limited channel dimension.
+Figure 5: An example of a 2D FAS receiver, illustrating the mapping between the 2D indices and 1D index.
+and ˆN < N, the value of (9) will gradually approach 1. Fig. 4 shows that this is true and can be realized by a small ˆN (in contrast to N). For example, when W = 0.5 and W = 2, the value of (9) is close to 1 with ˆN, respectively, being 3 and 6. The exact channel model hn in (7) can thus be accurately approximated by taking into account only a few eigenvalues of J. Using these properties, it is possible to approximate the PDF and CDF of h in closed-form expressions, and analyze the outage probability of single-user FAS channels [89], [93], and that for a two-user FAMA system [92]. Recall that in a point-to-point TAS scenario, where the transmitter and receiver use a traditional ﬁxed-position antenna, the complex channel is modeled as in (4), which has limited channel dimension. 
+
 C. Channel Model for 2D FAS
-The channel model in (6) primarily focuses on a 1D ﬂuid
-antenna surface implemented at the receiver. Nevertheless, we
-can extend the channel model to the scenario where both the
-transmitter and receiver are equipped with 2D ﬂuid antenna
-surfaces by taking into account of the 3D environment. More
-concretely, we may assume that the 2D ﬂuid antenna has N s
-i
-ports uniformly distributed along a linear dimension of length
+The channel model in (6) primarily focuses on a 1D ﬂuid antenna surface implemented at the receiver. Nevertheless, we can extend the channel model to the scenario where both the transmitter and receiver are equipped with 2D ﬂuid antenna surfaces by taking into account of the 3D environment. More concretely, we may assume that the 2D ﬂuid antenna has N s
+i ports uniformly distributed along a linear dimension of length
 W s
 i λ, where i ∈{1, 2} and s ∈{rx, tx}. Thus, the 2D ﬂ
 ```
@@ -2712,34 +2647,8 @@ i λ, where i ∈{1, 2} and s ∈{rx, tx}. Thus, the 2D ﬂ
 
 ```text
 roposed in [90, Algorithm 1].
-This procedure leads to a block-diagonal matrix with as many
-blocks as dominant eigenvalues in the original correlation
-matrix, and approximately equal spectrum (set of eigenvalues),
-as illustrated in Fig. 6 using a linear FAS as an example.
-Replacing the true correlation matrix (e.g., Jakes’) by the
-above block-diagonal approximation seems to translate well
-into similar performance when analyzing FAS, as exempliﬁed
-Figure 6: Eigenvalues of correlation matrix for a linear ﬂuid
-antenna with W = 4 and Nrx = 100 under Jakes’ model [91],
-Clarke’s model [96] and the method in [90] (µ2 = 0.97).
-Figure 7: Outage probability for 3-user slow FAMA assuming
-a linear FAS at each user with W = 7 and Nrx = 150 under
-different correlation models (µ2 = 0.97 for the block-diagonal
-approximation). Slow FAMA will be discussed in Section V-B.
-in Fig. 7, where the outage probability of FAMA is plotted
-under Jakes’ correlation model, the block-diagonal approxima-
-tion [90] and the constant model [88]. As can be seen, while
-the block-diagonal model yields a tight approximation, the
-constant model considerably overestimates the performance.
-In short, [90] provides an alternative approach to analyt-
-ically characterize FAS which (i) retains the tractability of
-[88] while yielding accurate results, tightly approximating the
-performance under realistic models such as Jakes’, (ii) can be
-applied to any (arbitrary) correlation structure, as well as to
-linear (1D) and planar (2D) ﬂuid antennas, and (iii) relieves
-the computational burden of simulating FAS since the block-
-diagonal correlation is much easier to generate than the cross-
-correlation inherent to conventional models like Jakes’.
+This procedure leads to a block-diagonal matrix with as many blocks as dominant eigenvalues in the original correlation matrix, and approximately equal spectrum (set of eigenvalues), as illustrated in Fig. 6 using a linear FAS as an example. Replacing the true correlation matrix (e.g., Jakes’) by the above block-diagonal approximation seems to translate well into similar performance when analyzing FAS, as exempliﬁed Figure 6: Eigenvalues of correlation matrix for a linear ﬂuid antenna with W = 4 and Nrx = 100 under Jakes’ model [91], Clarke’s model [96] and the method in [90] (µ2 = 0.97). Figure 7: Outage probability for 3-user slow FAMA assuming a linear FAS at each user with W = 7 and Nrx = 150 under different correlation models (µ2 = 0.97 for the block-diagonal approximation). Slow FAMA will be discussed in Section V-B. in Fig. 7, where the outage probability of FAMA is plotted under Jakes’ correlation model, the block-diagonal approxima-tion [90] and the constant model [88]. As can be seen, while the block-diagonal model yields a tight approximation, the constant model considerably overestimates the performance.
+In short, [90] provides an alternative approach to analyt-ically characterize FAS which (i) retains the tractability of [88] while yielding accurate results, tightly approximating the performance under realistic models such as Jakes’, (ii) can be applied to any (arbitrary) correlation structure, as well as to linear (1D) and planar (2D) ﬂuid antennas, and (iii) relieves the computational burden of simulating FAS since the block-diagonal correlation is much easier to generate than the cross-correlation inherent to conventional models like Jakes’.
 ```
 
 ### Figure 7: Outage probability for 3-user slow FAMA assuming (Page 10)
@@ -2747,32 +2656,11 @@ correlation inherent to conventional models like Jakes’.
 ![Figure 7: Outage probability for 3-user slow FAMA assuming](/mnt/data/Wong_COMST_00354_2024_assets/Figure7_p10.png)
 
 ```text
-equal spectrum (set of eigenvalues),
-as illustrated in Fig. 6 using a linear FAS as an example.
-Replacing the true correlation matrix (e.g., Jakes’) by the
-above block-diagonal approximation seems to translate well
-into similar performance when analyzing FAS, as exempliﬁed
-Figure 6: Eigenvalues of correlation matrix for a linear ﬂuid
-antenna with W = 4 and Nrx = 100 under Jakes’ model [91],
-Clarke’s model [96] and the method in [90] (µ2 = 0.97).
-Figure 7: Outage probability for 3-user slow FAMA assuming
-a linear FAS at each user with W = 7 and Nrx = 150 under
-different correlation models (µ2 = 0.97 for the block-diagonal
-approximation). Slow FAMA will be discussed in Section V-B.
-in Fig. 7, where the outage probability of FAMA is plotted
-under Jakes’ correlation model, the block-diagonal approxima-
-tion [90] and the constant model [88]. As can be seen, while
-the block-diagonal model yields a tight approximation, the
-constant model considerably overestimates the performance.
-In short, [90] provides an alternative approach to analyt-
-ically characterize FAS which (i) retains the tractability of
-[88] while yielding accurate results, tightly approximating the
-performance under realistic models such as Jakes’, (ii) can be
-applied to any (arbitrary) correlation structure, as well as to
-linear (1D) and planar (2D) ﬂuid antennas, and (iii) relieves
-the computational burden of simulating FAS since the block-
-diagonal correlation is much easier to generate than the cross-
-correlation inherent to conventional models like Jakes’.
+equal spectrum (set of eigenvalues), as illustrated in Fig. 6 using a linear FAS as an example.
+Replacing the true correlation matrix (e.g., Jakes’) by the above block-diagonal approximation seems to translate well into similar performance when analyzing FAS, as exempliﬁed Figure 6: Eigenvalues of correlation matrix for a linear ﬂuid antenna with W = 4 and Nrx = 100 under Jakes’ model [91], Clarke’s model [96] and the method in [90] (µ2 = 0.97).
+Figure 7: Outage probability for 3-user slow FAMA assuming a linear FAS at each user with W = 7 and Nrx = 150 under different correlation models (µ2 = 0.97 for the block-diagonal approximation). Slow FAMA will be discussed in Section V-B.
+in Fig. 7, where the outage probability of FAMA is plotted under Jakes’ correlation model, the block-diagonal approxima-tion [90] and the constant model [88]. As can be seen, while the block-diagonal model yields a tight approximation, the constant model considerably overestimates the performance. 
+In short, [90] provides an alternative approach to analyt-ically characterize FAS which (i) retains the tractability of [88] while yielding accurate results, tightly approximating the performance under realistic models such as Jakes’, (ii) can be applied to any (arbitrary) correlation structure, as well as to linear (1D) and planar (2D) ﬂuid antennas, and (iii) relieves the computational burden of simulating FAS since the block-diagonal correlation is much easier to generate than the cross-correlation inherent to conventional models like Jakes’.
 ```
 
 ### Figure 8: Some key considerations in FAS models. (Page 13)
@@ -2782,29 +2670,12 @@ correlation inherent to conventional models like Jakes’.
 ```text
 13
 Figure 8: Some key considerations in FAS models.
-diverse channel models, along with the previously discussed
-ones, can be extended to scenarios involving multiple FAS
-users, as evidenced in [72], [123], [124], [125]. Stochastic
-geometry can also be seamlessly integrated into FAS [126],
-[127], [128], where the locations of multiple transmitters are
-distributed randomly. Rather than going through all existing
-channel models in literature, the materials above aim to equip
-readers with the essential knowledge regarding the factors to
-consider and extensions that can be made. This foundation en-
-ables researchers to adopt existing channel models or develop
-new ones tailored to their applications. On the other hand,
-circuit and antenna theories can help develop a more physics-
-and electromagnetic-compliant modeling of FAS and enhance
-its performance. In a nutshell, some key considerations include
-antenna architecture, circuit conﬁguration, spatial correlation,
-and environment, as highlighted in Fig. 8.
+diverse channel models, along with the previously discussed ones, can be extended to scenarios involving multiple FAS users, as evidenced in [72], [123], [124], [125]. Stochastic geometry can also be seamlessly integrated into FAS [126], [127], [128], where the locations of multiple transmitters are distributed randomly. Rather than going through all existing channel models in literature, the materials above aim to equip
+readers with the essential knowledge regarding the factors to consider and extensions that can be made. This foundation en-ables researchers to adopt existing channel models or develop new ones tailored to their applications. On the other hand, circuit and antenna theories can help develop a more physics-and electromagnetic-compliant modeling of FAS and enhance its performance. In a nutshell, some key considerations include
+antenna architecture, circuit conﬁguration, spatial correlation, and environment, as highlighted in Fig. 8.
+
 III. CHANNEL ESTIMATION
-In this section, we discuss the process of channel estimation
-for FAS. Unlike TAS where each port or preset location of
-the antennas requires estimation, FAS simpliﬁes the process
-by necessitating the channel knowledge from only a few
-locations for complete recovery of the full CSI. This efﬁciency
-is achieved through leveraging the strong spatial correlation or
+In this section, we discuss the process of channel estimation for FAS. Unlike TAS where each port or preset location of the antennas requires estimation, FAS simpliﬁes the process by necessitating the channel knowledge from only a few locations for complete recovery of the full CSI. This efﬁciency is achieved through leveraging the strong spatial correlation or
 ```
 
 ### Figure 9: A UAMA architecture for CSI extraplation. (Page 14)
@@ -2869,31 +2740,12 @@ Linear Projection & Positional Encoding
 Linear Prediction
 MLP
 MLP
+
 Figure 9: A UAMA architecture for CSI extraplation.
-are utilized to construct basis vectors in response to the
-CSI of observable ports, which are subsequently used for
-the linear representation of the CSI of unknown ports. For
-instance, attention mechanisms can be employed, wherein
-the basis vectors are constructed based on the similarity of
-CSI across different observable ports. Additionally, there
-exist spatial and frequency domain interaction mecha-
-nisms, such as the spatial MLP (e.g., DynaMixer [133])
-and the dynamic fast Fourier transform (FFT) (e.g., FNet
-[134]), as shown in Fig. 9. We collectively refer to these
-various mechanism modules as MetaMixer. Note that all
-these mechanisms possess a global receptive ﬁeld.
-• Mid-mapper (with parameters θM): This module is em-
-ployed to reduce the dimensionality of the basis vectors.
-This is very important to help alleviate the computational
-complexity during the decoding process.
-• Decoder (with parameters θD): This module is utilized
-to recover the CSI of unknown ports. On a planar array
-with a certain resolution, the channels often exhibit local
-correlations and smoothness. Therefore, we can linearly
-represent the CSI of the remaining unknown ports in a lo-
-cal diffusion using the basis vectors generated by the En-
-coder, which essentially involves learning the coefﬁcients
-of these basis vectors. As depicted in Fig. 9, the mod
+are utilized to construct basis vectors in response to the CSI of observable ports, which are subsequently used for the linear representation of the CSI of unknown ports. For instance, attention mechanisms can be employed, wherein the basis vectors are constructed based on the similarity of CSI across different observable ports. Additionally, there exist spatial and frequency domain interaction mecha-nisms, such as the spatial MLP (e.g., DynaMixer [133])
+and the dynamic fast Fourier transform (FFT) (e.g., FNet [134]), as shown in Fig. 9. We collectively refer to these various mechanism modules as MetaMixer. Note that all these mechanisms possess a global receptive ﬁeld.
+• Mid-mapper (with parameters θM): This module is em-ployed to reduce the dimensionality of the basis vectors. This is very important to help alleviate the computational complexity during the decoding process.
+• Decoder (with parameters θD): This module is utilized to recover the CSI of unknown ports. On a planar array with a certain resolution, the channels often exhibit local correlations and smoothness. Therefore, we can linearly represent the CSI of the remaining unknown ports in a lo-cal diffusion using the basis vectors generated by the En-coder, which essentially involves learning the coefﬁcients of these basis vectors. As depicted in Fig. 9, the mod
 ```
 
 ### Figure 10: The NMSE for CSI extrapolation versus the number (Page 15)
@@ -2902,12 +2754,8 @@ of these basis vectors. As depicted in Fig. 9, the mod
 
 ```text
 15
-Figure 10: The NMSE for CSI extrapolation versus the number
-of observed ports at different frequencies F with number of
-ports (N1, N2) = (20, 40), number of users U = 10, and the
-planar FAS size (W1, W2) = (2cm, 4cm).
-the physical size of the FAS is ﬁxed.4 The NMSE metric is
-deﬁned as NMSEhU,ˆhU =
+Figure 10: The NMSE for CSI extrapolation versus the number of observed ports at different frequencies F with number of ports (N1, N2) = (20, 40), number of users U = 10, and the planar FAS size (W1, W2) = (2cm, 4cm).
+the physical size of the FAS is ﬁxed.4 The NMSE metric is deﬁned as NMSEhU,ˆhU =
 PStest
 t=1 ∥h(t)
 U −ˆh
@@ -2916,36 +2764,7 @@ U ∥2
 PStest
 t=1 ∥h(t)
 U ∥2
-, where Stest is
-the number of test samples and the superscript (t) speciﬁes the
-t-th sample. In this simulation, we employ a transformer [149]
-architecture as the encoder, while the decoder utilizes a CNN-
-like architecture similar to ResNet [135]. The computational
-complexity of the attention mechanism is O(N 2
-Ol1 + NOl2
-1),
-in which NO represents the number of observable ports and
-l1 represents the hidden layer dimensions. The computational
-complexity of the CNN-like mechanism is O(Nc2
-ol2
-2 + Nl2
-2),
-where N
-= N1 × N2 is the total number of ports, co
-is the convolution kernel size, and l2 represents the hidden
-layer dimensions. Hence, the overall complexity is O(N 2
-Ol1 +
-NOl2
-1 + Nc2
-ol2
-2 + Nl2
-2) where typically NO, co ≪N.
-As can be observed from the results in Fig. 10, the NMSE
-for CSI extrapolation at a FAS receiver decreases with the
-number of observable ports. This is because when the number
-of observable ports increases, the constructed basis vectors in
-the channel space become more precise, and thus resulting in
-small
+, where Stest is the number of test samples and the superscript (t) speciﬁes the t-th sample. In this simulation, we employ a transformer [149] architecture as the encoder, while the decoder utilizes a CNN-like architecture similar to ResNet [135]. The computational complexity of the attention mechanism is O(N 2 Ol1 + NOl2 1), in which NO represents the number of observable ports and l1 represents the hidden layer dimensions. The computational complexity of the CNN-like mechanism is O(Nc2 ol2 2 + Nl2 2), where N = N1 × N2 is the total number of ports, co is the convolution kernel size, and l2 represents the hidden layer dimensions. Hence, the overall complexity is O(N 2 Ol1 + NOl2 1 + Nc2 ol2 2 + Nl2 2) where typically NO, co ≪N. As can be observed from the results in Fig. 10, the NMSE for CSI extrapolation at a FAS receiver decreases with the number of observable ports. This is because when the number of observable ports increases, the constructed basis vectors in the channel space become more precise, and thus resulting in small
 ```
 
 ### Figure 11: Channel estimation for a multiuser uplink system, (Page 15)
@@ -2953,41 +2772,11 @@ small
 ![Figure 11: Channel estimation for a multiuser uplink system,](/mnt/data/Wong_COMST_00354_2024_assets/Figure11_p15.png)
 
 ```text
-e different channel estimation methods for
-ﬁnite scattering environments via a mathematical approach.
+e different channel estimation methods for ﬁnite scattering environments via a mathematical approach.
 B. Finite Scattering Environment
-As summarized in Table III, there have been efforts tackling
-the CSI estimation problem in FAS. In [126], it was proposed
-4This means that the electrical size of the FAS increases with the carrier
-frequency. This also implies that weaker correlation between the observable
-ports is anticipated at higher frequency.
-Figure 11: Channel estimation for a multiuser uplink system,
-where each user is equipped with a linear FAS while the BS
-has multiple traditional ﬁxed-position antennas.
-to estimate the CSI at a few ports using the LMMSE-based
-method, and then simply take the estimated CSI of an observ-
-able port as that of other ports in its neighborhood. Although
-this scheme can be applied in both rich and ﬁnite scattering
-environments, it introduces not only estimation error but also
-approximation error. Under ﬁnite scattering, a more efﬁcient
-and common practice is to estimate the sparse parameters of
-the channel and then reconstruct the CSI at all ports based on
-these parameters [150], [151], [152], [153], [154].
-In this subsection, we use the multiuser uplink system in
-[150] as an example. Consider a simple setup as depicted in
-Fig. 11, where the BS has M ﬁxed-position antennas that are
-separated by ∆= λ
-2 and each user has a 1D ﬂuid antenna,
-with N selectable ports uniformly distributed along a linear
-dimension of length Wλ. In the multiuser uplink, the channel
-vector from the n-th port of user u to the BS can be denoted
-by hu,n ∈CM×1. By stacking hu,n for all n ∈{1, . . . , N},
-we can obtain the channel matrix between the BS and all the
-ports of user u as
-Hu = [hu,1, . . . , hu,N].
-(33)
-Channel estimation in FAS aims to estimate Hu, ∀u. In the
-following, we discuss several methods that c
+As summarized in Table III, there have been efforts tackling the CSI estimation problem in FAS. In [126], it was proposed 4This means that the electrical size of the FAS increases with the carrier frequency. This also implies that weaker correlation between the observable ports is anticipated at higher frequency. Figure 11: Channel estimation for a multiuser uplink system, where each user is equipped with a linear FAS while the BS has multiple traditional ﬁxed-position antennas. to estimate the CSI at a few ports using the LMMSE-based method, and then simply take the estimated CSI of an observ-able port as that of other ports in its neighborhood. Although this scheme can be applied in both rich and ﬁnite scattering environments, it introduces not only estimation error but also approximation error. Under ﬁnite scattering, a more efﬁcient and common practice is to estimate the sparse parameters of the channel and then reconstruct the CSI at all ports based on these parameters [150], [151], [152], [153], [154].
+In this subsection, we use the multiuser uplink system in [150] as an example. Consider a simple setup as depicted in Fig. 11, where the BS has M ﬁxed-position antennas that are separated by ∆= λ 2 and each user has a 1D ﬂuid antenna, with N selectable ports uniformly distributed along a linear dimension of length Wλ. In the multiuser uplink, the channel vector from the n-th port of user u to the BS can be denoted by hu,n ∈CM×1. By stacking hu,n for all n ∈{1, . . . , N}, we can obtain the channel matrix between the BS and all the ports of user u as Hu = [hu,1, . . . , hu,N].
+(33) Channel estimation in FAS aims to estimate Hu, ∀u. In the following, we discuss several methods that c
 ```
 
 ### Figure 12: NMSE versus NO. (Page 18)
@@ -3058,26 +2847,9 @@ Average computational time (s)
 OMP
 LS
 L3SCR
-Figure 13: The NMSE and computational time for different
-estimation methods with M = 64 and NO = 10.
-time for each channel realization across different parameters.
-Several observations can be made from the results in these
-ﬁgures. Firstly, when M is small, the OMP method outper-
-forms the L3SCR method in terms of the NMSE, whereas the
-situation reverses if M is large. Secondly, in numerous conﬁg-
-urations, the least square method outperforms the L3SCR and
-OMP methods in terms of the NMSE. However, it is important
-to recognize that the least square method requires signiﬁcantly
-higher hardware switching and pilot overhead compared to the
-other two methods. This is owing to the requirement for the
-antennas of all users to switch and transmit pilot sequences
-at all N ports, which may lead to lower spectral efﬁciency in
-practice. In addition, it is evident that the OMP method incurs
-much higher computational time than the L3SCR method. This
-is attributed to the need for matrix inversions in the OMP
-method when handling least square problems, contributing to
-high computational intensity.
-4) Other schemes: So far, we h
+
+Figure 13: The NMSE and computational time for different estimation methods with M = 64 and NO = 10.
+time for each channel realization across different parameters. Several observations can be made from the results in these ﬁgures. Firstly, when M is small, the OMP method outper-forms the L3SCR method in terms of the NMSE, whereas the situation reverses if M is large. Secondly, in numerous conﬁg-urations, the least square method outperforms the L3SCR and OMP methods in terms of the NMSE. However, it is important to recognize that the least square method requires signiﬁcantly higher hardware switching and pilot overhead compared to the other two methods. This is owing to the requirement for the antennas of all users to switch and transmit pilot sequences at all N ports, which may lead to lower spectral efﬁciency in practice. In addition, it is evident that the OMP method incurs much higher computational time than the L3SCR method. This is attributed to the need for matrix inversions in the OMP method when handling least square problems, contributing to high computational intensity. 4) Other schemes: So far, we h
 ```
 
 ### Figure 13: The NMSE and computational time for different (Page 18)
@@ -3144,35 +2916,17 @@ SNR (dB)
 10-1
 100
 101
-Average computational time (s)
+
+Average computational time (s) 
 OMP
 LS
 L3SCR
-Figure 13: The NMSE and computational time for different
-estimation methods with M = 64 and NO = 10.
-time for each channel realization across different parameters.
-Several observations can be made from the results in these
-ﬁgures. Firstly, when M is small, the OMP method outper-
-forms the L3SCR method in terms of the NMSE, whereas the
-situation reverses if M is large. Secondly, in numerous conﬁg-
-urations, the least square method outperforms the L3SCR and
-OMP methods in terms of the NMSE. However, it is important
-to recognize that the least square method requires signiﬁcantly
-higher hardware switching and pilot overhead compared to the
-other two methods. This is owing to the requirement for the
-antennas of all users to switch and transmit pilot sequences
-at all N ports, which may lead to lower spectral efﬁciency in
-practice. In addition, it is evident that the OMP method incurs
-much higher computational time than the L3SCR method. This
-is attributed to the need for matrix inversions in the OMP
-method when handling least square problems, contributing to
-high computational intensity.
-4) Other schemes: So far, we have shown that in the ﬁnite-
-scattering environment, the geometric model can be adopted
-to characterize the channel of an FAS-assisted uplink system.
-Based on this model, some standard tools can be employed
-to estimate the sparse channel parameters at some prescribed
-obs
+
+Figure 13: The NMSE and computational time for different estimation methods with M = 64 and NO = 10.
+
+time for each channel realization across different parameters. Several observations can be made from the results in these ﬁgures. Firstly, when M is small, the OMP method outper- forms the L3SCR method in terms of the NMSE, whereas the situation reverses if M is large. Secondly, in numerous conﬁg- urations, the least square method outperforms the L3SCR and OMP methods in terms of the NMSE. However, it is important to recognize that the least square method requires signiﬁcantly higher hardware switching and pilot overhead compared to the other two methods. This is owing to the requirement for the antennas of all users to switch and transmit pilot sequences at all N ports, which may lead to lower spectral efﬁciency in practice. In addition, it is evident that the OMP method incurs much higher computational time than the L3SCR method. This is attributed to the need for matrix inversions in the OMP method when handling least square problems, contributing to high computational intensity.
+
+4) Other schemes: So far, we have shown that in the ﬁnite-scattering environment, the geometric model can be adopted to characterize the channel of an FAS-assisted uplink system. Based on this model, some standard tools can be employed to estimate the sparse channel parameters at some prescribed obs
 ```
 
 ### Fig. 14: Since the same analogy can be applied to Rx-SISO-FAS, our (Page 19)
@@ -3182,29 +2936,16 @@ obs
 ```text
 19
 Figure 14: A schematic of Tx-SISO-FAS with 2D FAS.
-to evaluate both systems with the same number of RF chains,
-as this allows for comparable signal processing capabilities.
-For example, maximum ratio transmission (MRT) can only be
-performed if multiple active ports/antennas are considered at
-the transmitter side, while maximum ratio combining (MRC)
-requires multiple active ports/antennas at the receiver side.
-Likewise, parallel transmission can only be achieved if multi-
-ple active ports/antennas are employed at both ends.
-In certain cases, it is useful to consider the same antenna
-structure, such as position-reconﬁguration dimensions and
-identical antenna sizes. In this context, multiple ﬁxed-position
-antennas can be used in TAS but the key distinction between
-FAS and TAS is that the antennas in TAS require at least half
-a wavelength of spacing. Besides, since FAS is not limited to
-antenna-position reconﬁguration alone, TAS can similarly be
-extended to exclude other reconﬁgurable characteristics, such
-as antenna orientation and shape, for benchmarking purposes.
+
+to evaluate both systems with the same number of RF chains, as this allows for comparable signal processing capabilities.
+For example, maximum ratio transmission (MRT) can only be performed if multiple active ports/antennas are considered at the transmitter side, while maximum ratio combining (MRC) requires multiple active ports/antennas at the receiver side.
+Likewise, parallel transmission can only be achieved if multi-ple active ports/antennas are employed at both ends.
+In certain cases, it is useful to consider the same antenna structure, such as position-reconﬁguration dimensions and identical antenna sizes. In this context, multiple ﬁxed-position antennas can be used in TAS but the key distinction between FAS and TAS is that the antennas in TAS require at least half a wavelength of spacing. Besides, since FAS is not limited to antenna-position reconﬁguration alone, TAS can similarly be extended to exclude other reconﬁgurable characteristics, such as antenna orientation and shape, for benchmarking purposes.
+
 B. SISO-FAS: The Basic Principles
 Let us now consider a Tx-SISO-FAS as shown in Fig. 14.
-Since the same analogy can be applied to Rx-SISO-FAS, our
-discussion here will be sufﬁcient to understand both cases.
-However, interested readers may refer to [89], [93] for a more
-comprehensive treatment on the case of Rx-SISO-FAS.
+Since the same analogy can be applied to Rx-SISO-FAS, our discussion here will be sufﬁcient to understand both cases. 
+However, interested readers may refer to [89], [93] for a more comprehensive treatment on the case of Rx-SISO-FAS.
 ```
 
 ### Figure 15: Amplitude of FAS versus Wtx. (Page 20)
@@ -3254,31 +2995,13 @@ Dual-MIMO-FAS
 Amplitude
 Minimum amplitude required
 Maximum amplitude
+
 Figure 15: Amplitude of FAS versus Wtx.
-matrix H. For optimal performance, the transmitter and re-
-ceiver can activate the port that provides the overall highest
-amplitude. Using these optimal strategies, we can investigate
-the performance of a traditional SISO system, Tx/Rx-SISO-
-FAS and Dual-SISO-FAS over different Ns, s ∈{rx, tx}.
-As illustrated in Fig. 16, the performance of Dual-SISO-
-FAS outperforms Tx/Rx-SISO-FAS followed by the traditional
-SISO system. The rationale behind the superiority of FAS is
-that Dual-SISO-FAS can be interpreted as a fully correlated
-MIMO system where only one input and one output are used.
-Consequently, the performance is understandably much better
-than the traditional SISO system. Likewise, Tx-SISO-FAS and
-Rx-SISO-FAS correspond to the correlated MISO and SIMO
-systems but only one input or output can be accessed by the
-transmitter or receiver, respectively. Since the SISO system
-is a subset of the correlated MIMO/MISO/SIMO system, it
-is straightforward that FAS is more superior than TAS. Thus,
-despite having the same number of radiating elements, FAS
-outperforms TAS because an extreme number of correlated
-channels within a given space can be exploited.
-It is worth pointing out that FAS can also yield higher en-
-ergy efﬁciency than TAS due to the diversity gain. Speciﬁcally,
-FAS requires less transmit power than TAS to achieve a spe-
-ciﬁc rate.
+
+matrix H. For optimal performance, the transmitter and re-ceiver can activate the port that provides the overall highest amplitude. Using these optimal strategies, we can investigate the performance of a traditional SISO system, Tx/Rx-SISO-FAS and Dual-SISO-FAS over different Ns, s ∈{rx, tx}. 
+As illustrated in Fig. 16, the performance of Dual-SISO-FAS outperforms Tx/Rx-SISO-FAS followed by the traditional SISO system. The rationale behind the superiority of FAS is that Dual-SISO-FAS can be interpreted as a fully correlated MIMO system where only one input and one output are used.
+Consequently, the performance is understandably much better than the traditional SISO system. Likewise, Tx-SISO-FAS and Rx-SISO-FAS correspond to the correlated MISO and SIMO systems but only one input or output can be accessed by the transmitter or receiver, respectively. Since the SISO system is a subset of the correlated MIMO/MISO/SIMO system, it is straightforward that FAS is more superior than TAS. Thus, despite having the same number of radiating elements, FAS outperforms TAS because an extreme number of correlated channels within a given space can be exploited. 
+It is worth pointing out that FAS can also yield higher en-ergy efﬁciency than TAS due to the diversity gain. Speciﬁcally, FAS requires less transmit power than TAS to achieve a spe-ciﬁc rate.
 ```
 
 ### Figure 16: The performance of different SISO-FAS cases (Page 21)
@@ -3334,26 +3057,9 @@ SISO
 Tx/Rx-SISO-FAS
 Dual-SISO-FAS
 (b)
-Figure 16: The performance of different SISO-FAS cases
-versus Ns, where SNR = 40 dB, Rmin = 15 bps/Hz, and
-Ws = 2λ × 2λ: a) average rate; and b) outage probability.
-traditional MIMO with antenna selection at the transmitter and
-Tx-SIMO-FAS is that in FAS, only a single ﬂuid antenna is
-required at the transmitter as opposed to having an extreme
-number of ﬁxed-position antennas within the predeﬁned space.
-Due to position ﬂexibility, the gain of Tx-SIMO-FAS is more
-apparent when the FAS size is small. To obtain the optimal
-performance, the transmitter in Tx-SIMO-FAS can activate the
-port with the largest MRC gain. Similar to SISO-FAS, we can
-implement the ﬂuid antennas at both ends and optimize their
-ports using the same principle in Dual-SIMO-FAS.
-In Fig. 19, we present the performance of different SIMO-
-FAS cases against the FAS size, Ws. It is assumed that the
-number of active ports is 4. As anticipated, Dual-SIMO-FAS
-outperforms Tx/Rx-only SIMO-FAS signiﬁcantly, followed by
-the ﬁxed-position SIMO antenna system. When Ws is small,
-Tx-SIMO-FAS outperforms Rx-SIMO-FAS while the opposite
-occurs when Ws is large. The main reason is that in the SIMO
+Figure 16: The performance of different SISO-FAS cases versus Ns, where SNR = 40 dB, Rmin = 15 bps/Hz, and Ws = 2λ × 2λ: a) average rate; and b) outage probability. traditional MIMO with antenna selection at the transmitter and Tx-SIMO-FAS is that in FAS, only a single ﬂuid antenna is required at the transmitter as opposed to having an extreme number of ﬁxed-position antennas within the predeﬁned space.
+Due to position ﬂexibility, the gain of Tx-SIMO-FAS is more apparent when the FAS size is small. To obtain the optimal performance, the transmitter in Tx-SIMO-FAS can activate the port with the largest MRC gain. Similar to SISO-FAS, we can implement the ﬂuid antennas at both ends and optimize their ports using the same principle in Dual-SIMO-FAS. In Fig. 19, we present the performance of different SIMO-FAS cases against the FAS size, Ws. It is assumed that the number of active ports is 4. As anticipated, Dual-SIMO-FAS outperforms Tx/Rx-only SIMO-FAS signiﬁcantly, followed by the ﬁxed-position SIMO antenna system. When Ws is small, Tx-SIMO-FAS outperforms Rx-SIMO-FAS while the opposite occurs when Ws is large. The main reason is that in the SIMO
+
 0.5
 1
 1.5
